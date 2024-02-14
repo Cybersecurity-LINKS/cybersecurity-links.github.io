@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -40,7 +42,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          id: 'mediterraneus',
+          sidebarPath: './sidebars/sidebarsMediterraneus.js',
+          path: 'docs_mediterraneus',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -53,13 +59,35 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+        // Will be passed to @docusaurus/plugin-sitemap (false to disable)
+        sitemap: {},
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'identity',
+        path: 'docs_identity',
+        routeBasePath: 'identity',
+        sidebarPath: './sidebars/sidebarsIdentity.js',
+        // ... other options
+      },
+    ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -74,9 +102,17 @@ const config = {
         items: [
           {
             type: 'docSidebar',
+            docsPluginId: 'mediterraneus',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Mediterraneus',
+          },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'identity',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Identity',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -94,7 +130,11 @@ const config = {
             items: [
               {
                 label: 'Mediterraneus',
-                to: '/docs/intro',
+                to: '/docs_mediterraneus/intro',
+              },
+              {
+                label: 'Identity',
+                to: '/docs_identity/intro',
               },
             ],
           },
