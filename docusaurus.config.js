@@ -11,7 +11,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CyberLINKS',
-  tagline: 'Cybersecurity research team of Fondazione Links research center',
+  tagline: 'Cybersecurity research team at LINKS Foundation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -52,13 +52,13 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         // Will be passed to @docusaurus/plugin-sitemap (false to disable)
         sitemap: {},
         theme: {
@@ -67,18 +67,18 @@ const config = {
       }),
     ],
   ],
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'identity',
-        path: 'docs_identity',
-        routeBasePath: 'identity',
-        sidebarPath: './sidebars/sidebarsIdentity.js',
-        // ... other options
-      },
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-content-docs',
+  //     {
+  //       id: 'identity',
+  //       path: 'docs_identity',
+  //       routeBasePath: 'identity',
+  //       sidebarPath: './sidebars/sidebarsIdentity.js',
+  //       // ... other options
+  //     },
+  //   ],
+  // ],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -97,7 +97,7 @@ const config = {
         title: 'CyberLINKS',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.jpg',
         },
         items: [
           {
@@ -107,14 +107,14 @@ const config = {
             position: 'left',
             label: 'Mediterraneus',
           },
-          {
-            type: 'docSidebar',
-            docsPluginId: 'identity',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Identity',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   type: 'docSidebar',
+          //   docsPluginId: 'identity',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Identity',
+          // },
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Cybersecurity-LINKS',
             label: 'GitHub',
@@ -130,12 +130,12 @@ const config = {
             items: [
               {
                 label: 'Mediterraneus',
-                to: '/docs_mediterraneus/intro',
+                to: '/docs/intro',
               },
-              {
-                label: 'Identity',
-                to: '/docs_identity/intro',
-              },
+              // {
+              //   label: 'Identity',
+              //   to: '/identity/intro',
+              // },
             ],
           },
           // {
@@ -158,10 +158,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/Cybersecurity-LINKS',
@@ -169,7 +169,11 @@ const config = {
               {
                 label: 'Crates.io',
                 href: 'https://crates.io/teams/github:cybersecurity-links:publish'
-              }
+              },
+              {
+                label: 'Fondazione LINKS',
+                href: 'https://linksfoundation.com/'
+              },
             ],
           },
         ],
