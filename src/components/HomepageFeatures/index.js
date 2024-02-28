@@ -65,7 +65,7 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
-        <span> Images by&nbsp;<a href="https://it.freepik.com/autore/vectorjuice">vectorjuice</a>&nbsp;from Freepik </span>
+        <span> Images by&nbsp;<a href="https://www.freepik.com/author/vectorjuice">vectorjuice</a>&nbsp;from Freepik </span>
       </div>
     </section>
   );
