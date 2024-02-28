@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Trusted Computing',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/trusted-computing.svg').default,
     description: (
       <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Self-Sovereign Identity',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/ssi.svg').default,
     description: (
       <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Cryptography',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/cryptography.svg').default,
     description: (
       <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -32,7 +32,7 @@ const FeatureList = [
   },
   {
     title: 'Distributed Ledger Technologies',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/blockchain.svg').default,
     description: (
       <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -58,15 +58,14 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="text--center padding-horiz--md">
-          <Heading as="h2">Lines of Research​</Heading>
-        </div>
+      <div className="container text--center">
+        <Heading as="h2">Lines of Research​</Heading>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
+        <span> Images by&nbsp;<a href="https://it.freepik.com/autore/vectorjuice">vectorjuice</a>&nbsp;from Freepik </span>
       </div>
     </section>
   );
