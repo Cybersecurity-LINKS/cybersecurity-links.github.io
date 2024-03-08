@@ -67,18 +67,18 @@ const config = {
       }),
     ],
   ],
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-content-docs',
-  //     {
-  //       id: 'identity',
-  //       path: 'docs_identity',
-  //       routeBasePath: 'identity',
-  //       sidebarPath: './sidebars/sidebarsIdentity.js',
-  //       // ... other options
-  //     },
-  //   ],
-  // ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'embrave',
+        path: 'docs_embrave',
+        routeBasePath: 'embrave',
+        sidebarPath: './sidebars/sidebarsEmbrave.js',
+        // ... other options
+      },
+    ],
+  ],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -107,13 +107,13 @@ const config = {
             position: 'left',
             label: 'Mediterraneus',
           },
-          // {
-          //   type: 'docSidebar',
-          //   docsPluginId: 'identity',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Identity',
-          // },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'embrave',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Embrave',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Cybersecurity-LINKS',
@@ -132,10 +132,10 @@ const config = {
                 label: 'Mediterraneus',
                 to: '/docs/intro',
               },
-              // {
-              //   label: 'Identity',
-              //   to: '/identity/intro',
-              // },
+              {
+                label: 'Embrave',
+                to: '/embrave/intro',
+              },
             ],
           },
           // {
