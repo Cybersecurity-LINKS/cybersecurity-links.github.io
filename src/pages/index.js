@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Cybersecurity research team at LINKS Foundation">
+      description="Cybersecurity Research Group at LINKS Foundation">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

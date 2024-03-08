@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/trusted-computing.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        A set of interoperable HW and SW technologies for building trust in the behaviour of embedded devices. The core elements are an HW Root of Trust (RoT) called Trusted Platform Module (TPM) and/or a Trusted Execution Environment (TEE).
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/ssi.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        A decentralised identity model for embedded devices based on three fundamental elements: Distributed Ledger Technology (DLT) as the Root of Trust (RoT) for public identity data, Decentralised IDentifier (DID), and Verifiable Credential (VC) as the key components of the identity.
       </>
     ),
   },
@@ -26,16 +26,16 @@ const FeatureList = [
     Svg: require('@site/static/img/cryptography.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Cryptographic key management, Zero-Knowledge Proof (ZKP) techniques applied to SSI, and the transition of Internet protocols and decentralised identity frameworks to Post-Quantum Cryptography (PQC).
       </>
     ),
   },
   {
-    title: 'Distributed Ledger Technologies',
+    title: 'Distributed Ledgers and Smart Contracts',
     Svg: require('@site/static/img/blockchain.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Building blocks for developing connected, decentralized, secure and self-organizing (embedded) systems.
       </>
     ),
   },
