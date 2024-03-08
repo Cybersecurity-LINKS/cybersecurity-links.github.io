@@ -11,7 +11,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'CyberLINKS',
-  tagline: 'Cybersecurity research team at LINKS Foundation',
+  tagline: 'Cybersecurity Research Group at LINKS Foundation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
