@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmediterraneus_docs=self.webpackChunkmediterraneus_docs||[]).push([[526],{2089:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"embrave"}')}}]);
