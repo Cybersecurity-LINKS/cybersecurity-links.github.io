@@ -1,12 +1,12 @@
 ---
-sidebar_position: 5
+sidebar_position: 9
 ---
 
 # Configuration File
 
 The system supports configuration through a a file, located in ``/etc/embrave.conf``. The file is in the format of a standard INI file, with sections and key-value pairs. The following sections are supported:
 
-## AttesterAgent
+## Attester Agent
 
 
 The ``[AttesterAgent]`` section contains general settings for Attester.
@@ -84,7 +84,7 @@ The ``[Verifier]`` section contains settings related to the Verifier.
     join_service_port = 8000
 ```
 
-## JoinService
+## Join Service
 
 The ``[JoinService]`` section contains settings related to the Join Service.
 
