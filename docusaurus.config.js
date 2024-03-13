@@ -42,22 +42,25 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          id: 'mediterraneus',
-          sidebarPath: './sidebars/sidebarsMediterraneus.js',
+          id: 'docs-mediterraneus', // omitted => default instance
+          sidebarPath: './sidebars.js', 
           path: 'docs_mediterraneus',
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          routeBasePath: 'mediterraneus',
+          
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          //   'https://github.com/Cybersecurity-LINKS/cybersecurity-links.github.io',
+          // ... other options
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         // blog: {
         //   showReadingTime: true,
         //   // Please change this to your repo.
         //   // Remove this to remove the "edit this page" links.
         //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        //     'https://github.com/Cybersecurity-LINKS/cybersecurity-links.github.io',
         // },
         // Will be passed to @docusaurus/plugin-sitemap (false to disable)
         sitemap: {},
@@ -71,10 +74,10 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'embrave',
+        id: 'docs-embrave',
         path: 'docs_embrave',
         routeBasePath: 'embrave',
-        sidebarPath: './sidebars/sidebarsEmbrave.js',
+        sidebarPath: './sidebars.js',
         // ... other options
       },
     ],
@@ -102,14 +105,14 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            docsPluginId: 'mediterraneus',
+            docsPluginId: 'docs-mediterraneus',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Mediterraneus',
           },
           {
             type: 'docSidebar',
-            docsPluginId: 'embrave',
+            docsPluginId: 'docs-embrave',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Embrave',
@@ -130,7 +133,7 @@ const config = {
             items: [
               {
                 label: 'Mediterraneus',
-                to: '/docs/intro',
+                to: '/mediterraneus/intro',
               },
               {
                 label: 'Embrave',
