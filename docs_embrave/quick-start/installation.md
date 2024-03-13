@@ -17,11 +17,11 @@ cmake -B build .
 cd build
 sudo make <target-name>
 ```
-``<target-name>`` definens which targets to build:
+``<target-name>`` defines which targets to build:
 
 - ``attester-server``: The Attester component
 - ``verifier``: The Verifier component
 - ``join-service``: The Join Service component
 
-If the intention is to build only all compoents, the command is  simply ``sudo make``
+If the intention is to build only all components, the command is simply ``sudo make``
 
