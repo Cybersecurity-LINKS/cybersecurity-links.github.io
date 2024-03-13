@@ -82,6 +82,12 @@ The ``[Verifier]`` section contains settings related to the Verifier.
 
     # Port where it runs the http Join Service server
     join_service_port = 8000
+
+    # MQTT broker IP address
+    mqtt_broker_ip = localhost
+
+    # Port where it runs the MQTT broker
+    mqtt_broker_port = 1883
 ```
 
 ## Join Service
@@ -115,4 +121,10 @@ The ``[JoinService]`` section contains settings related to the Join Service.
 
     # Path of ca hash certificates
     ca_x509_path = /home/linux/Documents/embrave/tpm_ca_certs_hash_dir
+  
+    # MQTT broker IP address
+    mqtt_broker_ip = localhost
+
+    # Port where it runs the MQTT broker
+    mqtt_broker_port = 1883
 ```
