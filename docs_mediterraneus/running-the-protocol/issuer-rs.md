@@ -1,10 +1,11 @@
 ---
 sidebar_position: 2
+description: Issuer of verifiable credentials using smart contracts to bind Externally Owned Accounts (EOAs) with Self-Sovereign Identities (SSI).
 ---
 
 # Issuer
 
-- [**mediterraneus-issuer-rs**](https://github.com/Cybersecurity-LINKS/mediterraneus-issuer-rs), Issuer of verifiable credentials using smart contracts to bind Externally Owned Accounts (EOAs) with Self-Sovereign Identities (SSI). Sample implementation for the Mediterraneus Protocol,
+- [**mediterraneus-issuer-rs**](https://github.com/Cybersecurity-LINKS/mediterraneus-issuer-rs)
 
 ## Requirements
 1. [cargo](https://www.rust-lang.org/learn/get-started), with `rustc 1.74 or newer`

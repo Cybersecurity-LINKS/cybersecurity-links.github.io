@@ -103,6 +103,7 @@ const config = {
           src: 'img/logo.jpg',
         },
         items: [
+          {to: 'publications', label: 'Publications', position: 'left'},
           {
             type: 'docSidebar',
             docsPluginId: 'docs-mediterraneus',
@@ -133,7 +134,7 @@ const config = {
             items: [
               {
                 label: 'Mediterraneus',
-                to: '/mediterraneus/intro',
+                to: '/mediterraneus',
               },
               {
                 label: 'Embrave',
@@ -141,23 +142,15 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'About',
+            items: [
+              {
+                label: 'Publications',
+                href: '/publications',
+              },
+            ],
+          },
           {
             title: 'More',
             items: [
