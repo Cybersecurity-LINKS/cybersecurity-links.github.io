@@ -1,10 +1,11 @@
 ---
 sidebar_position: 4
+description: Sample frontend application for interacting with the connector, issuer, and catalogue.
 ---
 
 # Frontend
 
-- [**mediterraneus-frontend**](https://github.com/Cybersecurity-LINKS/mediterraneus-frontend), sample frontend application for interacting with the connector, issuer, and catalogue.
+- [**mediterraneus-frontend**](https://github.com/Cybersecurity-LINKS/mediterraneus-frontend)
 
 # Running the Application
 
