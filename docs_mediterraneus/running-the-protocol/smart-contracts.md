@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+description: Smart contracts for the Mediterraneus protocol.
 ---
 
 # Smart contracts
 
-- [**mediterraneus-smart-contracts**](https://github.com/Cybersecurity-LINKS/mediterraneus-smart-contracts), smart contracts for the Mediterraneus protocol,
+- [**mediterraneus-smart-contracts**](https://github.com/Cybersecurity-LINKS/mediterraneus-smart-contracts)
 
 ## Requirements
 1. [Solidity compiler (hardhat)](https://hardhat.org/)

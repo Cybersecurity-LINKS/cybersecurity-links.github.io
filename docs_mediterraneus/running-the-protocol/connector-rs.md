@@ -1,10 +1,11 @@
 ---
 sidebar_position: 3
+description: Agent system that handles user identity and assets.
 ---
 
 # Connector
 
-- [**mediterraneus-connector-rs**](https://github.com/Cybersecurity-LINKS/mediterraneus-connector-rs), the connector  handles user identity and assets,
+- [**mediterraneus-connector-rs**](https://github.com/Cybersecurity-LINKS/mediterraneus-connector-rs)
 
 ## Requirements
 
