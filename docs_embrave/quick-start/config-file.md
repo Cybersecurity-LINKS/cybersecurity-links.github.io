@@ -1,5 +1,6 @@
 ---
 sidebar_position: 9
+description: Configuration file for Embrave
 ---
 
 # Configuration File
@@ -127,4 +128,7 @@ The ``[JoinService]`` section contains settings related to the Join Service.
 
     # Port where it runs the MQTT broker
     mqtt_broker_port = 1883
+    
+    # Join Service Log file
+    log_path = /var/embrave/join_service/log.txt
 ```

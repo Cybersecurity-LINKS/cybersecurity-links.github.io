@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+description: "Instructions for installing the requirements"
 ---
 # Requirements
 The following dependencies must be installed:
