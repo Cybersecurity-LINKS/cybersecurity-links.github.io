@@ -4,6 +4,28 @@ description: Publications of the Cybersecurity Research Group at LINKS Foundatio
 hide_table_of_contents: true
 ---
 
-# Publications
+# Scientific Publications
 
-To do
+## Preprint
+
+L. Giorgino and A. Vesco, "The Mediterraneous Protocol: building an SSI native decentralised ecosystem of digital services" arXive, 2024. [Online]. Available: 
+
+## Journals
+
+L. Perugini and A. Vesco, "On the integration of Self-Sovereign Identity with TLS 1.3 Handshake to Build Trust in IoT Systems," *Internet of Things*, p. 101103, 2024. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2542660524000453
+
+D. G. Berbecaru, S. Sisinni, A. Lioy, B. Rat, D. Margaria, and A. Vesco, "Mitigating Software Integrity Attacks With Trusted Computing in a Time Distribution Network," *IEEE Access*, vol. 11, pp. 50 510–50 527, 2023.
+
+E. Calia, M. Mezzalama, and A. Vesco, "Cybersecurity per Internet of Things e Infrastrutture Critiche," *Memorie dell’Accademia delle Scienze di Torino*, vol. 2, 2023.
+
+S. Sisinni, D. Margaria, I. Pedone, A. Lioy, and A. Vesco, "Integrity Verification of Distributed Nodes in Critical Infrastructures," *Sensors*, vol. 22, no. 18, 2022. [Online]. Available: https://www.mdpi.com/1424-8220/22/18/6950
+
+A. Carelli, A. Palmieri, A. Vilei, F. Castanier, and A. Vesco, "Enabling Secure Data Exchange through the IOTA Tangle for IoT Constrained Devices," *Sensors*, vol. 22, no. 4, 2022. [Online]. Available: https://www.mdpi.com/1424-8220/22/4/1384
+
+M. Davide and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 4.0 Applications," *Applied Sciences*, vol. 11, no. 18, 2021. [Online]. Available: https://www.mdpi.com/2076-3417/11/18/8288
+
+## Proceedings
+
+A. Pino, D. Margaria, and A. Vesco, "Combining Decentralized IDentifiers with Proof of Membership to Enable Trust in IoT Networks," in *Proceedings of 33rd International Telecommunication Networks and Applications Conference*, 2023, pp. 310–317.
+
+A. Claudio and A. Vesco, "A Novel DID Method Leveraging the IOTA Tangle and its Integration into OpenSSL," in *Proceedings of 5th International Congress on Blockchain and Applications*. Springer Nature Switzerland, 2023, pp. 394–404.
