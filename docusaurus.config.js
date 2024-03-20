@@ -132,7 +132,6 @@ const config = {
           src: 'img/logo.jpg',
         },
         items: [
-          {to: 'publications', label: 'Publications', position: 'left'},
           {
             type: 'docSidebar',
             docsPluginId: 'docs-mediterraneus',
@@ -153,6 +152,7 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {to: 'publications', label: 'Publications', position: 'left'},
         ],
       },
       footer: {
