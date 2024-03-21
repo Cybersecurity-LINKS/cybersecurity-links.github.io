@@ -5,7 +5,8 @@ slug: /
 
 # Mediterraneus Protocol
 
-Luca Giorgino and Andrea Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services," *white paper v1.0*, arXiv, 2024. [pdf](https://www.qubip.eu)
+Luca Giorgino and Andrea Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services," *white paper v1.0*, arXiv, 2024. [pdf](
+https://doi.org/10.48550/arXiv.2403.13510)
 
 # Introduction 
 The Mediterraneus protocol is designed to support the development of an Internet of Services, owned by their creators, and consumed by users, by presenting their decentralised digital identity and a proof of service purchase. The protocol is Self-Sovereign Identity (SSI) native, it integrates the SSI model at the core of its working principles to overcome the limitations resulting from the use of pseudonyms and centralised access control of existing Web3 solutions. The protocol is designed to enable SSI-based decentralised access control, thus fully respecting and supporting the decentralised, trustless, censorship-resistant, self-organising and non-custodial principles envisaged for the Internet of Services of the future.  
