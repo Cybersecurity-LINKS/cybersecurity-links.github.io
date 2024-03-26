@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 ## White Paper
 
-L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services" arXive, 2024. \
+L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services" white paper v1.0, arXive, 2024.\
 [Online]. Available: https://doi.org/10.48550/arXiv.2403.13510 
 
 ## Journals
