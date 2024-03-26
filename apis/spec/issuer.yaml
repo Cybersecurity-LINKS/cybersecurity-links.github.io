@@ -8,20 +8,17 @@ externalDocs:
   url: https://github.com/Cybersecurity-LINKS/mediterraneus-issuer-rs
 servers:
 - url: http://localhost:3213/api
-tags:
-- name: Credentials
-  description: Everything about Verifiable Credentials.
 paths:
   /challenges:
     get:
-      summary: Get a challenge that the client should sign and send back in a short time.
+      summary: Get a challenge to request a credential
       parameters:
         - in: query
           name: did
-          description: The did of the user who have to sign the challenge.
+          description: The did of the user who has to sign the challenge.
           required: true
           schema:
-            $ref: '#/components/schemas/did'   
+            $ref: '#/components/schemas/Did'   
       responses:
         200:
           description: The challenge to be signed.
@@ -43,65 +40,111 @@ paths:
                 $ref: '#/components/schemas/Error'
   /credentials:
     post:
-      summary: Get a challenge that the client should sign and send back in a short time.
-      parameters:
-        - in: query
-          name: did
-          description: The did of the user who have to sign the challenge.
-          required: true
-          schema:
-            $ref: '#/components/schemas/did'   
+      summary: Issue a verifiable credential for the user
+      description: Issue a verifiable credential for the user, the credential is signed with the issuer private key and it is encoded as JWT
+      operationId: "create_credential"
       responses:
-        '200':
-          description: The spacecraft corresponding to the provided `spacecraftId`
+        200:
+          description: Sccessful operation, return the verifiable credential as JWT
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Spacecraft'
-        404:
-          description: No spacecraft found for the provided `spacecraftId`
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
+                $ref: '#/components/schemas/CredentialIssuedResponse'
         500:
           description: Unexpected error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error' 
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CredentialRequestDTO'
 components:
   schemas:
-    did:
+    Did:
       description: The unique identifier of a spacecraft
       type: string
     Challenge:
-      description: The unique identifier of a spacecraft
-      type: string
-    SpacecraftId:
-      description: The unique identifier of a spacecraft
-      type: string
-    Spacecraft:
+      description: A random challenge
       type: object
       required:
-        - id
-        - name
-        - type
+        - nonce
       properties:
-        id:
-          $ref: '#/components/schemas/SpacecraftId'
-        name:
+        nonce:
+          description: A random challenge
           type: string
-        type:
+    CredentialIssuedResponse:
+      description: The response of the Issuer
+      type: object
+      required:
+        - issuerDid
+        - credentialId
+        - credentialJwt
+      properties:
+        message:
+          description: A human readable message
           type: string
-          enum:
-            - capsule
-            - probe
-            - satellite
-            - spaceplane
-            - station
-        description:
+        issuerDid: 
+          description: The issuer did 
           type: string
+        credentialId: 
+          description: The id of the credential
+          type: number
+        credentialJwt:
+          description: The credential in JWT format
+          type: string
+    CredentialRequestDTO:
+      description: The request of the user when requesting a credential
+      type: object
+      required:
+        - issuerDid
+        - credentialId
+        - credentialJwt
+      properties:
+        did:
+          description: The user did
+          type: string
+        nonce: 
+          description: The challenge that has been signed
+          type: string
+        identitySignature: 
+          description: Signature of the challenge with the identity private key
+          type: string
+        walletSignature:
+          description: Signature of the challenge with the wallet private key
+          type: string
+        credentialSubject:
+          description: Information about the user
+          type: object
+          example: 
+            name: "Mario"
+            surname: "Rossi"
+    # SpacecraftId:
+    #   description: The unique identifier of a spacecraft
+    #   type: string
+    # Spacecraft:
+    #   type: object
+    #   required:
+    #     - id
+    #     - name
+    #     - type
+    #   properties:
+    #     id:
+    #       $ref: '#/components/schemas/SpacecraftId'
+    #     name:
+    #       type: string
+    #     type:
+    #       type: string
+    #       enum:
+    #         - capsule
+    #         - probe
+    #         - satellite
+    #         - spaceplane
+    #         - station
+    #     description:
+    #       type: string
     Error:
       type: object
       required:
