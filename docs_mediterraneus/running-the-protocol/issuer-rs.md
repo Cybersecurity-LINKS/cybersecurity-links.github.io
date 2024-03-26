@@ -5,7 +5,7 @@ description: Issuer of verifiable credentials using smart contracts to bind Exte
 
 # Issuer
 
-- [**mediterraneus-issuer-rs**](https://github.com/Cybersecurity-LINKS/mediterraneus-issuer-rs)
+> [GitHub repository](https://github.com/Cybersecurity-LINKS/mediterraneus-issuer-rs)
 
 ## Requirements
 1. [cargo](https://www.rust-lang.org/learn/get-started), with `rustc 1.74 or newer`
@@ -15,7 +15,7 @@ description: Issuer of verifiable credentials using smart contracts to bind Exte
 
 1. Create a `.env` file starting from `.env.example` and update the values accordingly to your development enviroment. 
 
-```conf
+```editorconfig
 PRIVATE_KEY='<issuer private key>'
 NON_SECURE_MNEMONIC='<iota wallet mnemonic>'
 KEY_STORAGE_MNEMONIC='<identity key storage mnemonic>'
@@ -23,22 +23,24 @@ IDENTITY_SC_ADDRESS='<address of the Identity smart contract>'
 ```
 
 Optional:
-- Update the `abi/idsc_abi.json` file if there are changes to the Identity Smart Contract.
+- Update the `abi/identity_sc.json` file if there are changes to the Identity Smart Contract.
 
 ## Running the Application
 
 1. Start up the database by running:
-```
+```shell
 docker compose up -d
 ```
 
 2. Run the issuer service
-```sh
+```shell
 # For local node Provider
 cargo run --release -- -l
+# cargo run --release -- --custom-node http://127.0.0.1:8545/ --chain-id 31337
 
 # For Shimmer Provider
-cargo run --release
+cargo run --release 
+# cargo run --release -- --custom-node https://json-rpc.evm.testnet.shimmer.network --chain-id 1072
 
 # For custom Provider (example Sepolia)
 cargo run --release -- --custom-node https://sepolia.infura.io/v3/<API_KEY> --chain-id 11155111

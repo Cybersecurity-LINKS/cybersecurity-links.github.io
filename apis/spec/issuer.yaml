@@ -1,0 +1,119 @@
+openapi: '3.0.0'
+info:
+  version: '1.0.0'
+  title: 'Issuer API'
+  description: This document specifies the REST API for the Issuer service.
+externalDocs:
+  description: Github 
+  url: https://github.com/Cybersecurity-LINKS/mediterraneus-issuer-rs
+servers:
+- url: http://localhost:3213/api
+tags:
+- name: Credentials
+  description: Everything about Verifiable Credentials.
+paths:
+  /challenges:
+    get:
+      summary: Get a challenge that the client should sign and send back in a short time.
+      parameters:
+        - in: query
+          name: did
+          description: The did of the user who have to sign the challenge.
+          required: true
+          schema:
+            $ref: '#/components/schemas/did'   
+      responses:
+        200:
+          description: The challenge to be signed.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Challenge'
+        429:
+            description: Too Many Requests
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /credentials:
+    post:
+      summary: Get a challenge that the client should sign and send back in a short time.
+      parameters:
+        - in: query
+          name: did
+          description: The did of the user who have to sign the challenge.
+          required: true
+          schema:
+            $ref: '#/components/schemas/did'   
+      responses:
+        '200':
+          description: The spacecraft corresponding to the provided `spacecraftId`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Spacecraft'
+        404:
+          description: No spacecraft found for the provided `spacecraftId`
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error' 
+components:
+  schemas:
+    did:
+      description: The unique identifier of a spacecraft
+      type: string
+    Challenge:
+      description: The unique identifier of a spacecraft
+      type: string
+    SpacecraftId:
+      description: The unique identifier of a spacecraft
+      type: string
+    Spacecraft:
+      type: object
+      required:
+        - id
+        - name
+        - type
+      properties:
+        id:
+          $ref: '#/components/schemas/SpacecraftId'
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+            - capsule
+            - probe
+            - satellite
+            - spaceplane
+            - station
+        description:
+          type: string
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          description: A human readable error message
+          type: string
+#   securitySchemes:
+#     ApiKey:
+#       type: apiKey
+#       in: header
+#       name: X-Api-Key
+# security:
+#   - ApiKey: []

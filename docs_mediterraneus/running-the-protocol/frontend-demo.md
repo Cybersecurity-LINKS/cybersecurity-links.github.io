@@ -1,11 +1,11 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 description: Sample frontend application for interacting with the connector, issuer, and catalogue.
 ---
 
 # Frontend
 
-- [**mediterraneus-frontend**](https://github.com/Cybersecurity-LINKS/mediterraneus-frontend)
+> [GitHub repository](https://github.com/Cybersecurity-LINKS/mediterraneus-frontend)
 
 # Running the Application
 
@@ -15,10 +15,11 @@ To run the frontend application, follow these steps:
 
 2. Copy the `.env.example` file and rename it to `.env`. Make any necessary modifications to the `.env` file.
 
-3. Copy both the `addresses` and `artifact` folders from the [`mediterraneus-smart-contracts`](https://github.com/Cybersecurity-LINKS/mediterraneus-smart-contracts) repository (these folders are obtained after deploying the smart contracts) into the `src` folder of the frontend application.
+3. Copy both the `addresses` and `artifact` folders from the [`mediterraneus-smart-contracts`](https://github.com/Cybersecurity-LINKS/mediterraneus-smart-contracts) repository (these folders are obtained after the deployment of the smart contracts) into the `src` folder of the frontend application.
 
 4. Finally, execute the application by running `npm run dev`.
 
+<!-- 
 ## IOTA Identity Framework 
 The identity bindings include all the modules needed for creating and managing a Self-Sovereign Identity. 
 This results in having also the **iota-client** dependency, that is automatically included in the bindings itself.
@@ -71,4 +72,5 @@ import * as identity from "@iota/identity-wasm/web";
 
 init("sdk_wasm_bg.wasm") // fix with the right path
 .then(() => identity.init("identity_wasm_bg.wasm")); // fix with the right path
-```
+``` 
+-->
