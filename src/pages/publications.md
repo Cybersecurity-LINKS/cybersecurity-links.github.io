@@ -18,7 +18,8 @@ L. Perugini and A. Vesco, "On the integration of Self-Sovereign Identity with TL
 
 D. G. Berbecaru, S. Sisinni, A. Lioy, B. Rat, D. Margaria, and A. Vesco, "Mitigating Software Integrity Attacks With Trusted Computing in a Time Distribution Network," *IEEE Access*, vol. 11, pp. 50 510–50 527, 2023.
 
-E. Calia, M. Mezzalama, and A. Vesco, "Cybersecurity per Internet of Things e Infrastrutture Critiche," *Memorie dell’Accademia delle Scienze di Torino*, vol. 2, 2023.
+E. Calia, M. Mezzalama, and A. Vesco, "Cybersecurity per Internet of Things e Infrastrutture Critiche," *Memorie dell’Accademia delle Scienze di Torino*, vol. 2, 2023. \
+[Online]. Available: https://www.accademiadellescienze.it/book/06ff1c47-7356-45a8-aed2-623ff75898bf
 
 S. Sisinni, D. Margaria, I. Pedone, A. Lioy, and A. Vesco, "Integrity Verification of Distributed Nodes in Critical Infrastructures," *Sensors*, vol. 22, no. 18, 2022. \
 [Online]. Available: https://www.mdpi.com/1424-8220/22/18/6950
