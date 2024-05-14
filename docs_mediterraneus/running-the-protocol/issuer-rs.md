@@ -35,15 +35,13 @@ docker compose up -d
 2. Run the issuer service
 ```shell
 # For local node Provider
-cargo run --release -- -l
-# cargo run --release -- --custom-node http://127.0.0.1:8545/ --chain-id 31337
+cargo run --release -- --rpc-provider "http://127.0.0.1:8545/" --chain-id 31337
 
 # For Shimmer Provider
-cargo run --release 
-# cargo run --release -- --custom-node https://json-rpc.evm.testnet.shimmer.network --chain-id 1072
+cargo run --release -- --rpc-provider "https://json-rpc.evm.testnet.shimmer.network" --chain-id 1073
 
-# For custom Provider (example Sepolia)
-cargo run --release -- --custom-node https://sepolia.infura.io/v3/<API_KEY> --chain-id 11155111
+# For Sepolia 
+cargo run --release -- --rpc-provider https://sepolia.infura.io/v3/<API_KEY> --chain-id 11155111
 ```
 
 Keep in mind that when using the local node setup, the Identity ABI needs to be manually copied into the `abi` folder. Additionally, ensure that the file is named `idsc_abi.json`. On the other hand, when working with a public network, consider publishing the ABI and dynamically loading it through an API.
