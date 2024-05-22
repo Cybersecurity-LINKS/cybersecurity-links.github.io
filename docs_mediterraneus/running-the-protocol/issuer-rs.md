@@ -13,17 +13,24 @@ description: Issuer of verifiable credentials using smart contracts to bind Exte
 
 ## Prepare environment
 
+0. Generate contract bindings (to be done once or if contract change)
+```bash
+# assuming the mediterraneus-smart-contracts folder is located in the same root folder of mediterraneus-connector-rs
+cd abigen
+cargo run -- --contract Identity --abi-source "../../mediterraneus-smart-contracts/artifacts/contracts/Identity.sol/Identity.json"
+```
+
 1. Create a `.env` file starting from `.env.example` and update the values accordingly to your development enviroment. 
 
 ```editorconfig
-PRIVATE_KEY='<issuer private key>'
+L2_PRIVATE_KEY='<issuer private key>'
 NON_SECURE_MNEMONIC='<iota wallet mnemonic>'
 KEY_STORAGE_MNEMONIC='<identity key storage mnemonic>'
 IDENTITY_SC_ADDRESS='<address of the Identity smart contract>'
 ```
-
+<!-- 
 Optional:
-- Update the `abi/identity_sc.json` file if there are changes to the Identity Smart Contract.
+- Update the `abi/identity_sc.json` file if there are changes to the Identity Smart Contract. -->
 
 ## Running the Application
 
@@ -44,7 +51,7 @@ cargo run --release -- --rpc-provider "https://json-rpc.evm.testnet.shimmer.netw
 cargo run --release -- --rpc-provider https://sepolia.infura.io/v3/<API_KEY> --chain-id 11155111
 ```
 
-Keep in mind that when using the local node setup, the Identity ABI needs to be manually copied into the `abi` folder. Additionally, ensure that the file is named `idsc_abi.json`. On the other hand, when working with a public network, consider publishing the ABI and dynamically loading it through an API.
+<!-- Keep in mind that when using the local node setup, the Identity ABI needs to be manually copied into the `abi` folder. Additionally, ensure that the file is named `idsc_abi.json`. On the other hand, when working with a public network, consider publishing the ABI and dynamically loading it through an API. -->
 
 <!-- 
 ## Issuer initialization
