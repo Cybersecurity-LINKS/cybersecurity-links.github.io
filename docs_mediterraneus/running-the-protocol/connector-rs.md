@@ -31,5 +31,12 @@ docker compose up -d
 2. Run the connector service:
 ```bash 
 cd connector-rs
+# For local node Provider
 cargo run --release -- --rpc-provider "http://127.0.0.1:8545/" --chain-id 31337
+
+# For Shimmer Provider
+cargo run --release -- --rpc-provider "https://json-rpc.evm.testnet.shimmer.network" --chain-id 1073
+
+# For Sepolia 
+cargo run --release -- --rpc-provider https://sepolia.infura.io/v3/<API_KEY> --chain-id 11155111
 ```
