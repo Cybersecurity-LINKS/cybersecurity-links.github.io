@@ -33,7 +33,8 @@ M. Davide and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 4.
 ## Proceedings
 
 A. Colombatto, L. Giorgino, and A. Vesco, “An Identity Key Management System with Deterministic Key Hierarchy for SSI-native Internet of Things,” in *Proceedings of the 19th International Conference on
-Availability, Reliability and Security*, Vienna, Austria, 2024, pp. 1–6
+Availability, Reliability and Security*, Vienna, Austria, 2024, pp. 1–6. \
+[Online]. Available: https://doi.org/10.1145/3664476.3669929
 
 A. Pino, D. Margaria, and A. Vesco, "Combining Decentralized IDentifiers with Proof of Membership to Enable Trust in IoT Networks," in *Proceedings of 33rd International Telecommunication Networks and Applications Conference*, 2023, pp. 310–317.
 
