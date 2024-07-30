@@ -27,7 +27,7 @@ S. Sisinni, D. Margaria, I. Pedone, A. Lioy, and A. Vesco, "Integrity Verificati
 A. Carelli, A. Palmieri, A. Vilei, F. Castanier, and A. Vesco, "Enabling Secure Data Exchange through the IOTA Tangle for IoT Constrained Devices," *Sensors*, vol. 22, no. 4, 2022. \
 [Online]. Available: https://www.mdpi.com/1424-8220/22/4/1384
 
-M. Davide and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 4.0 Applications," *Applied Sciences*, vol. 11, no. 18, 2021. \
+D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 4.0 Applications," *Applied Sciences*, vol. 11, no. 18, 2021. \
 [Online]. Available: https://www.mdpi.com/2076-3417/11/18/8288
 
 ## Proceedings
