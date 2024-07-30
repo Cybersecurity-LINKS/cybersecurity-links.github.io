@@ -32,6 +32,9 @@ M. Davide and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 4.
 
 ## Proceedings
 
+A. Colombatto, L. Giorgino, and A. Vesco, “An Identity Key Management System with Deterministic Key Hierarchy for SSI-native Internet of Things,” in *Proceedings of the 19th International Conference on
+Availability, Reliability and Security*, Vienna, Austria, 2024, pp. 1–6
+
 A. Pino, D. Margaria, and A. Vesco, "Combining Decentralized IDentifiers with Proof of Membership to Enable Trust in IoT Networks," in *Proceedings of 33rd International Telecommunication Networks and Applications Conference*, 2023, pp. 310–317.
 
 A. Claudio and A. Vesco, "A Novel DID Method Leveraging the IOTA Tangle and its Integration into OpenSSL," in *Proceedings of 5th International Congress on Blockchain and Applications*. Springer Nature Switzerland, 2023, pp. 394–404.
