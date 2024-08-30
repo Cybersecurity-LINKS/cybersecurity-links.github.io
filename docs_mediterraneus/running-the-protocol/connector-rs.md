@@ -43,6 +43,7 @@ cargo run --release -- --rpc-provider https://sepolia.infura.io/v3/<API_KEY> --c
 ## Run everything via Docker
 
 Beware of the configuration of the environment variables. Note: Modify `.env` and `postgres.env` reasonably. (`ADDR` and `PG.HOST` *must* be changed for the deployment use case).
+(The connector uses the Shimmer provider, change CMD command in the Dockerfile to change the network).
 
 Copy the smart contract json files to create the Rust bindings (mandatory if the smart contracts change. There is already a copy in this repo). 
 
