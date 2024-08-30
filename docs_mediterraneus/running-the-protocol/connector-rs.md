@@ -25,8 +25,7 @@ cargo run -- --contract ServiceBase --abi-source "../../mediterraneus-smart-cont
 
 1. Launch [IPFS desktop](https://docs.ipfs.tech/install/ipfs-desktop/) and start up the database by running:
 ```bash 
-cd connector-rs
-docker compose up -d
+docker compose --profile dev up -d
 ```
 2. Run the connector service:
 ```bash 
@@ -39,4 +38,20 @@ cargo run --release -- --rpc-provider "https://json-rpc.evm.testnet.shimmer.netw
 
 # For Sepolia 
 cargo run --release -- --rpc-provider https://sepolia.infura.io/v3/<API_KEY> --chain-id 11155111
+```
+
+## Run everything via Docker
+
+Beware of the configuration of the environment variables. Note: Modify `.env` and `postgres.env` reasonably. (`ADDR` and `PG.HOST` *must* be changed for the deployment use case).
+
+Copy the smart contract json files to create the Rust bindings (mandatory if the smart contracts change. There is already a copy in this repo). 
+
+```bash
+# assuming the mediterraneus-smart-contracts folder is located in the same root folder of mediterraneus-connector-rs
+cp ../mediterraneus-smart-contracts/artifacts/contracts/ServiceBase.sol/ServiceBase.json ./smart-contracts
+```
+
+Commands to build the app’s container image and launch the app container:
+```bash
+docker compose --profile deploy up -d
 ```

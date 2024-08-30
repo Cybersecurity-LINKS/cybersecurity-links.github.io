@@ -36,11 +36,12 @@ Optional:
 
 1. Start up the database by running:
 ```shell
-docker compose up -d
+docker compose --profile dev up -d
 ```
 
 2. Run the issuer service
 ```shell
+cd server
 # For local node Provider
 cargo run --release -- --rpc-provider "http://127.0.0.1:8545/" --chain-id 31337
 
@@ -68,3 +69,19 @@ Before issuing a VC the Issuer must perform the following operations:
 - [ethers-rs](https://docs.rs/ethers/latest/ethers/contract/struct.ContractInstance.html)
 
 -->
+
+## Run everything via Docker
+
+Beware of the configuration of the environment variables. Note: Modify `.env` reasonably. (`ADDR` and `PG.HOST` *must* be changed for the deployment use case).
+
+Copy the smart contract json files to create the Rust bindings (mandatory if the smart contracts change. There is already a copy in this repo). 
+
+```bash
+# assuming the mediterraneus-smart-contracts folder is located in the same root folder of mediterraneus-connector-rs
+cp ../mediterraneus-smart-contracts/artifacts/contracts/Identity.sol/Identity.json ./smart-contracts
+```
+
+Commands to build the app’s container image and launch the app container:
+```bash
+docker compose --profile deploy up -d
+```
