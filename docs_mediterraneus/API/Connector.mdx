@@ -1,0 +1,10 @@
+import SwaggerUI from "swagger-ui-react"
+import "swagger-ui-react/swagger-ui.css"
+import raw from "../../apis/render/connector.json"
+import "./style.css"
+
+export default function Hello() {
+  return <div style={{backgroundColor: "transparent"}}>
+    <SwaggerUI spec={raw}/>
+  </div>
+}
