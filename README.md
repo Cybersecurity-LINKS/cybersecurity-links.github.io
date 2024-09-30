@@ -1,7 +1,8 @@
 # CyberLINKS docs
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-
+### Prerequisites
+- **Node** >= 20
 ### Local Development
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
