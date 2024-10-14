@@ -16,7 +16,8 @@ L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native de
 L. Perugini and A. Vesco, "On the integration of Self-Sovereign Identity with TLS 1.3 Handshake to Build Trust in IoT Systems," *Internet of Things*, p. 101103, 2024. \
 [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2542660524000453
 
-D. G. Berbecaru, S. Sisinni, A. Lioy, B. Rat, D. Margaria, and A. Vesco, "Mitigating Software Integrity Attacks With Trusted Computing in a Time Distribution Network," *IEEE Access*, vol. 11, pp. 50 510–50 527, 2023.
+D. G. Berbecaru, S. Sisinni, A. Lioy, B. Rat, D. Margaria, and A. Vesco, "Mitigating Software Integrity Attacks With Trusted Computing in a Time Distribution Network," *IEEE Access*, vol. 11, pp. 50510–50527, 2023. \
+[Online]. Available: https://doi.org/10.1109/ACCESS.2023.3276476.
 
 E. Calia, M. Mezzalama, and A. Vesco, "Cybersecurity per Internet of Things e Infrastrutture Critiche," *Memorie dell’Accademia delle Scienze di Torino*, vol. 2, 2023. \
 [Online]. Available: https://www.accademiadellescienze.it/book/06ff1c47-7356-45a8-aed2-623ff75898bf
@@ -32,11 +33,14 @@ D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 
 
 ## Proceedings
 
-A. Pino, D. Margaria, A. Vesco, “On PQ/T Hybrid Verifiable Credentials and Presentations to Build Trust in IoT Systems,” in *Proceedings of 9th International Conference on Smart and Sustainable Technologies (SpliTech)*, Bol and Split, Croatia: IEEE, June 2024, pp. 1-6.
-
 A. Colombatto, L. Giorgino, and A. Vesco, “An Identity Key Management System with Deterministic Key Hierarchy for SSI-native Internet of Things,” in *Proceedings of the 19th International Conference on
 Availability, Reliability and Security*, Vienna, Austria, July 2024, pp. 1–6. \
 [Online]. Available: https://doi.org/10.1145/3664476.3669929
+
+A. Pino, D. Margaria, A. Vesco, “On PQ/T Hybrid Verifiable Credentials and Presentations to Build Trust in IoT Systems,” in *Proceedings of 9th International Conference on Smart and Sustainable Technologies (SpliTech)*, Bol and Split, Croatia: IEEE, June 2024, pp. 1-6.
+
+D. Margaria, A. Carelli, and A. Vesco, “Building Trust in Data for IoT Systems,” in *Proceedings of IEEE 24th International Symposium on Cluster, Cloud and Internet Computing Workshops*, Philadelphia,
+Pennsylvania, USA, May 2024, pp. 1–8.
 
 A. Pino, D. Margaria, and A. Vesco, "Combining Decentralized IDentifiers with Proof of Membership to Enable Trust in IoT Networks," in *Proceedings of 33rd International Telecommunication Networks and Applications Conference*, 2023, pp. 310–317.
 
