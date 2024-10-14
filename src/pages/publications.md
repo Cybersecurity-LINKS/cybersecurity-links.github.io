@@ -33,11 +33,14 @@ D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 
 
 ## Proceedings
 
-A. Pino, D. Margaria, A. Vesco, “On PQ/T Hybrid Verifiable Credentials and Presentations to Build Trust in IoT Systems,” in *Proceedings of 9th International Conference on Smart and Sustainable Technologies (SpliTech)*, Bol and Split, Croatia: IEEE, June 2024, pp. 1-6.
-
 A. Colombatto, L. Giorgino, and A. Vesco, “An Identity Key Management System with Deterministic Key Hierarchy for SSI-native Internet of Things,” in *Proceedings of the 19th International Conference on
 Availability, Reliability and Security*, Vienna, Austria, July 2024, pp. 1–6. \
 [Online]. Available: https://doi.org/10.1145/3664476.3669929
+
+A. Pino, D. Margaria, A. Vesco, “On PQ/T Hybrid Verifiable Credentials and Presentations to Build Trust in IoT Systems,” in *Proceedings of 9th International Conference on Smart and Sustainable Technologies (SpliTech)*, Bol and Split, Croatia: IEEE, June 2024, pp. 1-6.
+
+D. Margaria, A. Carelli, and A. Vesco, “Building Trust in Data for IoT Systems,” in *Proceedings of IEEE 24th International Symposium on Cluster, Cloud and Internet Computing Workshops*, Philadelphia,
+Pennsylvania, USA, May 2024, pp. 1–8.
 
 A. Pino, D. Margaria, and A. Vesco, "Combining Decentralized IDentifiers with Proof of Membership to Enable Trust in IoT Networks," in *Proceedings of 33rd International Telecommunication Networks and Applications Conference*, 2023, pp. 310–317.
 
