@@ -66,7 +66,7 @@ cargo run --profile develop
 ```
 
 Sometimes it may be useful to **override** `.env` parameters using cli args. 
-The complete list of parameters is available typing the `cargo run -- --help` command
+The complete list of parameters is available typing the `cargo run --profile develop -- --help` command
 
 For example, it is possible to define parameters for testing on different nodes:
 
