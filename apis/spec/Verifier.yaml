@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Verifier
+  version: 0.0.1
+paths:
+  /api/challenges/{did}:
+    get:
+      summary: Retrieve a nonce
+      operationId: get_challenge
+      description: 'Create a new challenge to be solved, associated with the provided did'
+      tags:
+        - 'Nonce'
+      responses:
+        '200':
+          description: 'Successfully created'
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/challenge'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: "error"
+                message: "Error message"
+        '422': 
+          description: "The DID provided is not valid or not supported"
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: "error"
+                message: "Request parameter is not a valid DID"
+      parameters:
+        - name: did
+          in: path
+          description: 'DID that is solving the challenge'
+          required: true
+          example: >-
+            did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6
+  /api/verify/vp:
+    get:
+      summary: verify VP
+      operationId: verify VP
+      description: 'Verify a Verifiable Presentation in JWK format'
+      tags:
+        - 'Verify'
+      responses:
+        '200':
+          description: 'Verified successfully'
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: "success"
+                message: "ok"
+        '403':
+          description: 'Verification failed'
+      requestBody:
+        $ref: '#/components/requestBodies/verify_vp'
+        required: true
+servers:
+  - url: http://localhost:1235
+components:
+  schemas:
+    error: 
+      type: object
+      properties: 
+        status: 
+          type: string
+          enum: ["success", "error"]
+        message:
+          type: string
+    challenge:
+      type: object
+      properties:
+        nonce:
+          type: string
+          example: "7c076f34-51d3-4195-a3a4-929d2df8d6bc"
+        requester_did:
+          type: string
+          example: >-
+            did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6
+        expiration: 
+          type: string
+          example: "1729670729557"
+    verify_vp:
+      type: object
+      properties:
+        token:
+          type: string
+          example: >- 
+               eyJraWQiOiJkaWQ6aW90YTpsbms6MHhjNjA5MmI0NGNkNDIyZmJmY2RhNGViODYzMDQ0MjhmYmQ0Y2M3MThmZTRhMWMzYzkyZDgxNTdlNjU4ODIwNWM2I2xhTUlNUlZMd2s5TkZWZ2RNMzhYQ3hIakRZbnpLNE5MOUlGazlzRVNpa1UiLCJ0eXAiOiJKV1QiLCJub25jZSI6IjZjYTY4NWYwLTBjMTQtNDk2Ny05OTNkLTZiMDA4OGYyODA4ZCIsImFsZyI6IkVkRFNBIn0.eyJleHAiOjE3Mjk4NzA1MjcsImlzcyI6ImRpZDppb3RhOmxuazoweGM2MDkyYjQ0Y2Q0MjJmYmZjZGE0ZWI4NjMwNDQyOGZiZDRjYzcxOGZlNGExYzNjOTJkODE1N2U2NTg4MjA1YzYiLCJuYmYiOjE3MjkwMDY1MjcsInZwIjp7IkBjb250ZXh0IjoiaHR0cHM6Ly93d3cudzMub3JnLzIwMTgvY3JlZGVudGlhbHMvdjEiLCJ0eXBlIjoiVmVyaWZpYWJsZVByZXNlbnRhdGlvbiIsInZlcmlmaWFibGVDcmVkZW50aWFsIjpbImV5SnJhV1FpT2lKa2FXUTZhVzkwWVRwc2JtczZNSGc0TnpVMllXTTBZakZrTjJVNU5ERTVObU5oTURKbU1EUmpOVFZpTmpSbU9EWXdNRFEzWlRneU5HWmlNVEU1WTJJMU1EVmhPR000TURFMVpUY3dPVGd6STNWUk9VUnBjVlpZYm1KeFlWcEVOblpRV1Y5dFYza3RSVXM1TTJSWVYzVkJNMWRuZVdabFVuVkhOVzhpTENKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKRlpFUlRRU0o5LmV5SnBjM01pT2lKa2FXUTZhVzkwWVRwc2JtczZNSGc0TnpVMllXTTBZakZrTjJVNU5ERTVObU5oTURKbU1EUmpOVFZpTmpSbU9EWXdNRFEzWlRneU5HWmlNVEU1WTJJMU1EVmhPR000TURFMVpUY3dPVGd6SWl3aWJtSm1Jam94TnpJNU1EQTJOVEkzTENKcWRHa2lPaUpvZEhSd2N6b3ZMMlY0WVcxd2JHVXVaV1IxTDJOeVpXUmxiblJwWVd4ekx6TTNNeklpTENKemRXSWlPaUprYVdRNmFXOTBZVHBzYm1zNk1IaGpOakE1TW1JME5HTmtOREl5Wm1KbVkyUmhOR1ZpT0RZek1EUTBNamhtWW1RMFkyTTNNVGhtWlRSaE1XTXpZemt5WkRneE5UZGxOalU0T0RJd05XTTJJaXdpZG1NaU9uc2lRR052Ym5SbGVIUWlPaUpvZEhSd2N6b3ZMM2QzZHk1M015NXZjbWN2TWpBeE9DOWpjbVZrWlc1MGFXRnNjeTkyTVNJc0luUjVjR1VpT2xzaVZtVnlhV1pwWVdKc1pVTnlaV1JsYm5ScFlXd2lMQ0pWYm1sMlpYSnphWFI1UkdWbmNtVmxRM0psWkdWdWRHbGhiQ0pkTENKamNtVmtaVzUwYVdGc1UzVmlhbVZqZENJNmV5SkhVRUVpT2lJMExqQWlMQ0prWldkeVpXVWlPbnNpYm1GdFpTSTZJa0poWTJobGJHOXlJRzltSUZOamFXVnVZMlVnWVc1a0lFRnlkSE1pTENKMGVYQmxJam9pUW1GamFHVnNiM0pFWldkeVpXVWlmU3dpYm1GdFpTSTZJa0ZzYVdObEluMTlmUS5KVXVROFQ1ZVZ2ZzZkQ3VmeGZac1NQbWRLcTEzaGFCQzFxb3JyQTVzRV9OeXhHNE51QWlvUll1M25DWWZtcERmNzFqODdKNU9PeWoteXIxWm4wdU9DdyJdfX0.hAEkPDBaWweDBU1HhDJC7dGGxIzykJnJVdA_4-q7-VSPh_EbTnIfSYHpuRyW4nRqzrTLoiZL3sxgc9JYLVqrBg
+  requestBodies:
+    verify_vp:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/verify_vp'
+      description: ''
+      required: true
+  securitySchemes: {}
