@@ -446,10 +446,7 @@ components:
           description: A human readable error message
           type: string
   
-  # securitySchemes:
-  #   ApiKey:
-  #     type: apiKey
-  #     in: header
-  #     name: X-Api-Key
-# security:
-#   - ApiKey: []
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
