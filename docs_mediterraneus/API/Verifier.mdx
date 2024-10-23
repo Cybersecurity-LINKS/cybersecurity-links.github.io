@@ -1,0 +1,8 @@
+import SwaggerUI from "swagger-ui-react"
+import "swagger-ui-react/swagger-ui.css"
+import raw from "../../apis/render/verifier.json"
+import "./style.css"
+
+export default function Hello() {
+  return <SwaggerUI spec={raw}/>
+}

@@ -7,7 +7,7 @@ description: Expandable and customizable verifier component.
 
 > [GitHub repository](https://github.com/Cybersecurity-LINKS/mediterraneus-verifier)
 
-This components is an http server that executes verification procedures for the Verifier in the SSI model. It is designed to be expanded and customizable for any use case.
+This components is an http server that executes verification procedures for the Verifier in the SSI model. It is designed to be expanded and customizable for any use case. Endpoints description is available [here](API/Verifier.mdx).
 
 ## Requirements
 1. [Node](https://nodejs.org/en)

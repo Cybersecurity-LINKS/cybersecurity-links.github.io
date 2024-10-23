@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Verifier
+  title: Verifier API
   version: 0.0.1
 paths:
   /api/challenges/{did}:
@@ -40,10 +40,12 @@ paths:
           in: path
           description: 'DID that is solving the challenge'
           required: true
-          example: >-
-            did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6
+          content:
+            text/plain:
+              example: >-
+                did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6
   /api/verify/vp:
-    get:
+    post:
       summary: verify VP
       operationId: verify VP
       description: 'Verify a Verifiable Presentation in JWK format'
@@ -61,9 +63,15 @@ paths:
                 message: "ok"
         '403':
           description: 'Verification failed'
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: "error"
+                message: "Failed to validate"
       requestBody:
         $ref: '#/components/requestBodies/verify_vp'
-        required: true
 servers:
   - url: http://localhost:1235
 components:
