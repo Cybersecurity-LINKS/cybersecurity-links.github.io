@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # ZKryptium
 
-[**ZKryptium**](https://github.com/Cybersecurity-LINKS/zkryptium) is a cryptographic library written in Rust which provides an implementation in accordance with:
+> [GitHub](https://github.com/Cybersecurity-LINKS/zkryptium)
+
+**ZKryptium** is a cryptographic library written in Rust which provides an implementation in accordance with:
 * [BBS+ Signature Scheme](./algorithms/bbs.md#bbs) 
 * [Blind BBS Signatures](./algorithms/bbs.md#blind-bbs-signature-extension)
 * [CL2003 Signature Scheme](./algorithms/cl03.md#cl03)
