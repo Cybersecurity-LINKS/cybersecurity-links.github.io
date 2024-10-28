@@ -83,6 +83,26 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-zkryptium',
+        path: 'docs_zkryptium',
+        routeBasePath: 'zkryptium',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-jpt',
+        path: 'docs_jpt',
+        routeBasePath: 'jpt',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      },
+    ],
     // wait for Docusaurus v3.0 compatibility
     // [
     //   // https://docusaurus-openapi.tryingpan.dev/
@@ -134,10 +154,10 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            docsPluginId: 'docs-mediterraneus',
+            docsPluginId: 'docs-zkryptium',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Mediterraneus',
+            label: 'ZKryptium',
           },
           {
             type: 'docSidebar',
@@ -145,6 +165,20 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Embrave',
+          },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'docs-mediterraneus',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Mediterraneus',
+          },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'docs-jpt',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'json-proof-token',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -162,12 +196,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Mediterraneus',
-                to: '/mediterraneus',
+                label: 'ZKryptium',
+                to: '/zkryptium/intro',
               },
               {
                 label: 'Embrave',
                 to: '/embrave/intro',
+              },
+              {
+                label: 'Mediterraneus',
+                to: '/mediterraneus',
+              },
+              {
+                label: 'json-proof-token',
+                to: '/jpt/intro',
               },
             ],
           },
