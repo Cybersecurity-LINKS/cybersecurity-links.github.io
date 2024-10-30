@@ -5,7 +5,8 @@ The [BBS (Boneh-Boyen-Shacham) Signature Scheme](https://datatracker.ietf.org/do
 Key characteristics of the BBS Signature Scheme:
 - **Signature Compactness**: The BBS scheme can sign multiple messages in a compact format, producing a single signature that proves the authenticity of all messages in the set. This reduces data overhead in multi-message scenarios.
 - **Selective Disclosure**: A unique feature of BBS signatures is their ability to selectively reveal certain signed messages while keeping others hidden. This functionality supports applications in privacy-preserving systems, such as Verifiable Credentials, where users may only need to disclose specific attributes of their identity.
-- **Non-Interactive Zero-Knowledge Proofs**: BBS signatures support efficient zero-knowledge proofs (ZKPs) for verifying the validity of certain messages in a signature set without exposing additional information. This ZKP capability underpins its use in privacy-focused applications.
+- **Unlinkable Proofs**: This scheme uses a zero-knowledge proof-of-knowledge of the signature, ensuring that a verifier cannot identify the specific signature used to generate the proof. This unlinkability makes each BBS proof appear random, even if derived from the same signature, preventing correlation.
+- **Proof of Possession**: This scheme allows a Prover to demonstrate possession of a signature without revealing it to the Verifier. A "presentation header" can also be included, containing contextual information such as a nonce, domain identifier, or validity period. This additional context enhances control over the intended audience or timeframe for the proof.
 
 The BBS scheme employs asymmetric cryptographic operations and relies on pairings between groups in elliptic curve cryptography, which allows for compact and efficient operations.
 
