@@ -11,6 +11,11 @@ hide_table_of_contents: true
 L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services" white paper v1.0, arXive, 2024.\
 [Online]. Available: https://doi.org/10.48550/arXiv.2403.13510 
 
+## Book Chapter
+
+L. Perugini, A. Pino, A. Solavagione, D. Margaria, and A. Vesco, "Integrating the Self-sovereign Identity in the TCP/IP Stack while Preserving Interoperability with Existing Identity Models," Cham: Springer Nature Switzerland, 2025, pp. 95–117.  \
+[Online]. Available: https://doi.org/10.1007/978-3-031-83149-2_5
+
 ## Journals
 
 L. Perugini and A. Vesco, "On the integration of Self-Sovereign Identity with TLS 1.3 Handshake to Build Trust in IoT Systems," *Internet of Things*, p. 101103, 2024. \
@@ -40,7 +45,7 @@ Availability, Reliability and Security*, Vienna, Austria, July 2024, pp. 1–6. 
 A. Pino, D. Margaria, A. Vesco, “On PQ/T Hybrid Verifiable Credentials and Presentations to Build Trust in IoT Systems,” in *Proceedings of 9th International Conference on Smart and Sustainable Technologies (SpliTech)*, Bol and Split, Croatia: IEEE, June 2024, pp. 1-6.
 
 D. Margaria, A. Carelli, and A. Vesco, “Building Trust in Data for IoT Systems,” in *Proceedings of IEEE 24th International Symposium on Cluster, Cloud and Internet Computing Workshops*, Philadelphia,
-Pennsylvania, USA, May 2024, pp. 1–8.
+PA, USA, May 2024, pp. 1–8.
 
 A. Pino, D. Margaria, and A. Vesco, "Combining Decentralized IDentifiers with Proof of Membership to Enable Trust in IoT Networks," in *Proceedings of 33rd International Telecommunication Networks and Applications Conference*, 2023, pp. 310–317.
 
