@@ -17,7 +17,7 @@ Add this to your Cargo.toml:
 
 ```
 [dependencies]
-json-proof-token = "0.3.5"
+json-proof-token = "0.4.1"
 ```
 
 ### Example
@@ -25,4 +25,7 @@ Take a look at the [examples](https://github.com/Cybersecurity-LINKS/json-proof-
 
 ## Tests
 
-TBD
+To run the tests
+```sh
+cargo test
+```
