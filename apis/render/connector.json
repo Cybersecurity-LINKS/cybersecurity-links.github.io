@@ -1,0 +1,659 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "version": "0.1.0",
+    "title": "Connector API",
+    "description": "This document specifies the REST API for the Connector service."
+  },
+  "externalDocs": {
+    "description": "Github",
+    "url": "https://github.com/Cybersecurity-LINKS/mediterraneus-client-side"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1234"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Identities",
+      "description": "Everything about user identities."
+    },
+    {
+      "name": "Assets",
+      "description": "Everything about user assets."
+    },
+    {
+      "name": "Other"
+    }
+  ],
+  "paths": {
+    "/identities": {
+      "post": {
+        "summary": "Creates a user identity.",
+        "description": "In detail, it creates a new Did embedding in the document an identity public key and an ethereum address provided by the user in the request.",
+        "tags": [
+          "Identities"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentityRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentityResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Find an identity by wallet address.",
+        "tags": [
+          "Identities"
+        ],
+        "parameters": [
+          {
+            "name": "ethAddress",
+            "description": "The wallet address of the user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/EthAddress"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The identity corresponding to the provided `ethAddress`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentityResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No spacecraft found for the provided `ethAddress`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Stores the verifiable credential issued by the Issuer.",
+        "description": "Update the identity credential value corresponding to the provided `ethAddress`.",
+        "tags": [
+          "Identities"
+        ],
+        "parameters": [
+          {
+            "name": "ethAddress",
+            "description": "The wallet address of the user.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/EthAddress"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "credentialJwt": {
+                    "description": "The verifiable credential in JWT format.",
+                    "type": "string",
+                    "example": "eyJraWQiOiJkaWQ6aW90YTpybXM6MHhhMTM2Yjk1YTFmMzc0ZWQwN2M1NDkzOTQ0ZmMwYWYyZjM5NmU3YzExNTAzNDhhZmJhZGVlYmI5ZmVkNjExYzMxI3BjT0lUbnUxSTBqSm9HM3JJNnFaZGtrVTVLaDUwNnctYnExc2t5QjBXOTAiLCJ0eXAiOiJKV1QiLCJhbGciOiJFZERTQSJ9.eyJleHAiOjE3NDI4OTMyNDUsImlzcyI6ImRpZDppb3RhOnJtczoweGExMzZiOTVhMWYzNzRlZDA3YzU0OTM5NDRmYzBhZjJmMzk2ZTdjMTE1MDM0OGFmYmFkZWViYjlmZWQ2MTFjMzEiLCJuYmYiOjE3MTEyNzA4NDUsImp0aSI6Imh0dHBzOi8vZXhhbXBsZS5tYXJrZXQvY3JlZGVudGlhbHMvMSIsInN1YiI6ImRpZDppb3RhOnJtczoweGIwYTVjNTM5NTNhMjhhZDJmMzg4MGIwOTg3ODI2NWU5OGRiMGJkM2Y5NmQxNjZiMjMzZWM4NGNkYWRiYjI0MmIiLCJ2YyI6eyJAY29udGV4dCI6Imh0dHBzOi8vd3d3LnczLm9yZy8yMDE4L2NyZWRlbnRpYWxzL3YxIiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIk1hcmtldHBsYWNlQ3JlZGVudGlhbCJdLCJjcmVkZW50aWFsU3ViamVjdCI6eyJuYW1lIjoiSm9obiIsInN1cm5hbWUiOiJEb2UgRG9lIiwidXNlck9mIjoiU0VESU1BUksgbWFya2V0cGxhY2UifX19.-6dTIWJUwmaOQq6IJz4hh3SEwBz2lKnUmY19av4nZY3wcTi7hp0TY2rn3G8vsMYIft4VFZCwSlAHi28GwpiBAQ"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated identity corresponding to the provided `ethAddress`.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentityResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/identities/{identityId}/sign-data": {
+      "post": {
+        "summary": "Sign the provided data with the identity private key.",
+        "tags": [
+          "Identities"
+        ],
+        "parameters": [
+          {
+            "name": "identityId",
+            "in": "path",
+            "description": "ID of the identity.",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": [
+                  "payload"
+                ],
+                "properties": {
+                  "payload": {
+                    "description": "The data to be signed",
+                    "type": "string"
+                  },
+                  "nonce": {
+                    "description": "Optional nonce",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Data signed with the identity private key",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "ssiSignature": {
+                      "description": "Signature in JWS format",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/identities/{identityId}/gen-presentation": {
+      "post": {
+        "summary": "Generate a verifiable presentation for the corresponding identity.",
+        "tags": [
+          "Identities"
+        ],
+        "parameters": [
+          {
+            "name": "identityId",
+            "in": "path",
+            "description": "ID of the identity used to generate the presentation",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": [
+                  "payload"
+                ],
+                "properties": {
+                  "challenge": {
+                    "description": "Challenge of the verifier",
+                    "type": "string"
+                  },
+                  "ethSignature": {
+                    "description": "Optional challenge signature using the wallet's private key to embed in the presentation",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Verifiable presentation generated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "presentation": {
+                      "description": "The verifiable presentation in JWT format",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assets": {
+      "post": {
+        "summary": "Upload an asset of the user",
+        "description": "In detail, two file are uploaded: the asset and its description. The description is uploaded on an IPFS local node",
+        "tags": [
+          "Assets"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ethAddress": {
+                    "type": "string"
+                  },
+                  "alias": {
+                    "description": "The alias of the asset",
+                    "type": "string"
+                  },
+                  "filename": {
+                    "description": "The asset and descriptions files.",
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Upload ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Find an asset by alias.",
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "alias",
+            "description": "The alias of the asset to access.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The asset information.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update the NFT address of the asset.",
+        "tags": [
+          "Assets"
+        ],
+        "parameters": [
+          {
+            "name": "alias",
+            "description": "The alias of the asset to access.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "nftAddress": {
+                    "description": "The address of the NFT that represent the asset.",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated asset information.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assets/{assetId}": {
+      "parameters": [
+        {
+          "name": "assetId",
+          "description": "The unique identifier of the asset",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/assetId"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Get the asset information.",
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "The asset information.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assets/aliases": {
+      "parameters": [
+        {
+          "name": "ethAddress",
+          "description": "The wallet address of the user.",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/EthAddress"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Get all the asset aliases.",
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "The list of aliases.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "aliases": {
+                      "description": "An array of string.",
+                      "type": "array"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assets/download": {
+      "parameters": [
+        {
+          "name": "alias",
+          "description": "The alias of the asset to access.",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Download the asset",
+        "description": "Asset download, verifiable presentation and proof of purchase verification are performed",
+        "tags": [
+          "Assets"
+        ],
+        "responses": {
+          "200": {
+            "description": "Return the file read from IPFS"
+          }
+        }
+      }
+    },
+    "/challenges": {
+      "get": {
+        "summary": "Get a challenge to access a service",
+        "tags": [
+          "Other"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "did",
+            "description": "The did of the user who has to sign the challenge.",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Did"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The challenge to be signed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Challenge"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cids/{cid}": {
+      "parameters": [
+        {
+          "name": "cid",
+          "in": "path",
+          "description": "Content Identifier",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Read the contents of a file that has been added to IPFS.",
+        "tags": [
+          "Other"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Return the file read from IPFS"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Did": {
+        "description": "A a new type of identifier that enables verifiable, decentralized digital identity.",
+        "type": "string",
+        "example": "did:iota:rms:0xb0a5c53953a28ad2f3880b09878265e98db0bd3f96d166b233ec84cdadbb242b"
+      },
+      "EthAddress": {
+        "description": "The wallet address of the user. The address is in EIP-55.",
+        "type": "string",
+        "example": "0xf9692336d7f37336c2061a545d8b2895b1415efe"
+      },
+      "Challenge": {
+        "description": "A random challenge",
+        "type": "object",
+        "required": [
+          "nonce"
+        ],
+        "properties": {
+          "nonce": {
+            "description": "A random challenge",
+            "type": "string"
+          }
+        }
+      },
+      "assetId": {
+        "description": "The unique identifier of an asset",
+        "type": "string"
+      },
+      "IdentityResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The id of the identity",
+            "type": "number",
+            "example": 1
+          },
+          "ethAddress": {
+            "$ref": "#/components/schemas/EthAddress"
+          },
+          "did": {
+            "$ref": "#/components/schemas/Did"
+          },
+          "fragment": {
+            "description": "Fragment of the identity key pair inside the DID document.",
+            "type": "string"
+          },
+          "credential": {
+            "description": "The verifiable credential of the user in JWT format (Upon identity creation, its value is undefined, the credential must be requested to an Issuer).",
+            "type": "string"
+          }
+        }
+      },
+      "IdentityRequest": {
+        "type": "object",
+        "properties": {
+          "ethAddress": {
+            "$ref": "#/components/schemas/EthAddress"
+          }
+        }
+      },
+      "AssetResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The id of the asset",
+            "type": "number"
+          },
+          "NftAddress": {
+            "description": "The wallet address of the user. The address is in EIP-55.",
+            "type": "string",
+            "example": "0xf9692336d7f37336c2061a545d8b2895b1415efe"
+          },
+          "cid": {
+            "description": "Content Identifier",
+            "type": "string"
+          },
+          "alias": {
+            "description": "The alias of the asset",
+            "type": "string"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "description": "A human readable error message",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

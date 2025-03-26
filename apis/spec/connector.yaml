@@ -24,7 +24,7 @@ paths:
 
   /identities:
     post:
-      summary: Creates a user identity.
+      summary: Creates user identity
       description: In detail, it creates a new Did embedding in the document an identity public key and an ethereum address provided by the user in the request. 
       tags:
       - Identities
@@ -42,7 +42,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/IdentityResponse'  
     get:
-      summary: Find an identity by wallet address.
+      summary: Find identity by wallet address
+      description: Find an identity by wallet address.
       tags:
       - Identities
       parameters:
@@ -72,7 +73,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     patch:
-      summary: Stores the verifiable credential issued by the Issuer.
+      summary: Store VC
       description: Update the identity credential value corresponding to the provided `ethAddress`.
       tags:
       - Identities
@@ -95,14 +96,16 @@ paths:
                   example: "eyJraWQiOiJkaWQ6aW90YTpybXM6MHhhMTM2Yjk1YTFmMzc0ZWQwN2M1NDkzOTQ0ZmMwYWYyZjM5NmU3YzExNTAzNDhhZmJhZGVlYmI5ZmVkNjExYzMxI3BjT0lUbnUxSTBqSm9HM3JJNnFaZGtrVTVLaDUwNnctYnExc2t5QjBXOTAiLCJ0eXAiOiJKV1QiLCJhbGciOiJFZERTQSJ9.eyJleHAiOjE3NDI4OTMyNDUsImlzcyI6ImRpZDppb3RhOnJtczoweGExMzZiOTVhMWYzNzRlZDA3YzU0OTM5NDRmYzBhZjJmMzk2ZTdjMTE1MDM0OGFmYmFkZWViYjlmZWQ2MTFjMzEiLCJuYmYiOjE3MTEyNzA4NDUsImp0aSI6Imh0dHBzOi8vZXhhbXBsZS5tYXJrZXQvY3JlZGVudGlhbHMvMSIsInN1YiI6ImRpZDppb3RhOnJtczoweGIwYTVjNTM5NTNhMjhhZDJmMzg4MGIwOTg3ODI2NWU5OGRiMGJkM2Y5NmQxNjZiMjMzZWM4NGNkYWRiYjI0MmIiLCJ2YyI6eyJAY29udGV4dCI6Imh0dHBzOi8vd3d3LnczLm9yZy8yMDE4L2NyZWRlbnRpYWxzL3YxIiwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsIk1hcmtldHBsYWNlQ3JlZGVudGlhbCJdLCJjcmVkZW50aWFsU3ViamVjdCI6eyJuYW1lIjoiSm9obiIsInN1cm5hbWUiOiJEb2UgRG9lIiwidXNlck9mIjoiU0VESU1BUksgbWFya2V0cGxhY2UifX19.-6dTIWJUwmaOQq6IJz4hh3SEwBz2lKnUmY19av4nZY3wcTi7hp0TY2rn3G8vsMYIft4VFZCwSlAHi28GwpiBAQ"
       responses: 
         200:
-          description:  The updated identity corresponding to the provided `ethAddress`.
+          summary:  The updated identity
+          description: The updated identity corresponding to the provided `ethAddress`.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/IdentityResponse'
   /identities/{identityId}/sign-data:
     post:
-      summary: Sign the provided data with the identity private key.
+      summary: Sign data
+      description: Sign the provided data with the identity private key.
       tags:
       - Identities
       parameters:  
@@ -138,7 +141,8 @@ paths:
                     type: string
   /identities/{identityId}/gen-presentation:
     post:
-      summary: Generate a verifiable presentation for the corresponding identity.
+      summary: Generate VP
+      description: Generate a verifiable presentation for the corresponding identity.
       tags:
       - Identities
       parameters:
@@ -181,7 +185,7 @@ paths:
 
   /assets:
     post:
-      summary: Upload an asset of the user
+      summary: Upload user asset
       description: "In detail, two file are uploaded: the asset and its description. The description is uploaded on an IPFS local node"
       tags:
       - Assets
@@ -210,7 +214,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AssetResponse'  
     get:
-      summary: Find an asset by alias.
+      summary: Find asset by alias
       tags:
       - Assets
       parameters:
@@ -228,7 +232,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/AssetResponse'
     patch:
-      summary: Update the NFT address of the asset.
+      summary: Update NFT
+      description: Update the NFT address of the asset.
       tags:
       - Assets
       parameters:
@@ -263,7 +268,7 @@ paths:
         schema:
           $ref: '#/components/schemas/assetId'
     get:
-      summary: Get the asset information.
+      summary: Get asset information
       tags:
       - Assets
       responses: 
@@ -282,7 +287,7 @@ paths:
         schema:
           $ref: '#/components/schemas/EthAddress'
     get: 
-      summary: Get all the asset aliases.
+      summary: Get all asset aliases
       tags:
       - Assets
       responses: 
@@ -321,7 +326,8 @@ paths:
 
   /challenges:
     get:
-      summary: Get a challenge to access a service
+      summary: Get challenge
+      description: Get a challenge to access a service
       tags:
       - Other
       parameters:
@@ -338,12 +344,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Challenge'
-        429:
-            description: Too Many Requests
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/Error'
         500:
           description: Unexpected error
           content:
@@ -359,7 +359,8 @@ paths:
         schema:
           type: string
     get:
-      summary: Read the contents of a file that has been added to IPFS.
+      summary: Read from IPFS
+      description: Read the contents of a file that has been added to IPFS.
       tags:
       - Other
       security:
@@ -446,10 +447,7 @@ components:
           description: A human readable error message
           type: string
   
-  # securitySchemes:
-  #   ApiKey:
-  #     type: apiKey
-  #     in: header
-  #     name: X-Api-Key
-# security:
-#   - ApiKey: []
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer

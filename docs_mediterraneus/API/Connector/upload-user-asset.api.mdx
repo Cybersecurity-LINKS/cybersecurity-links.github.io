@@ -1,0 +1,71 @@
+---
+id: upload-user-asset
+title: "Upload user asset"
+description: "In detail, two file are uploaded: the asset and its description. The description is uploaded on an IPFS local node"
+sidebar_label: "Upload user asset"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVE1v2zAM/SsCz2o+m3T1LRs2IJct6Mep6IG26FmbLXkSvTYI/N8Hym2SLhkwYIf5JJD0E/neE3dgKBbBtmy9gwzWThlitLVW/ORVaWtSGEh1be3RkMkUV6QwRmKFzijLUR0hjNRdRccBZeP+X+WdQqfWm0+3qvYF1sp5Q6CB8WuE7AFWAhvhUUOgHx1Ffu/NFrIdFN4xOZZj09VsWww8Ln1oLgwySjgWFTXpxNuWIAOff6OCQUMbfEuBLUXJElcrYwLFeFQbOVj3FXoNWFtMmbesyFAppXx5IEA6/x1ACHPY0B8w9rwd5WJiOY4OcBgCbkGDZWrO9KlBRkeGDHLrMGyhHz7hLbbexWHW2WRy2sZ9EkP576CPacW2rW2BUjT+FqXy7zm15vy01vyBLtc1OQWh63PJR3KcQjxhXQtjQ80rXBcpDE57TdiorFMf15uLxWJ0oosGesamrSU0eS6vl9ez+Xxprsr51Xy+LGaT5RQXlwvzLp+9u17k08vpgkqS/opzs30YaFNrQ45taSmcc8I/WqnXwJZTy+lZ3LwoCy9KN8SVN5BB62OSBLmCDMY4vCENkcJPCvKudtCFGjKomNtsPE5Pr/KRs+lsfgn9o9QWXbC8vRXFB1FzwkBh1Qnq3gCCINCpTOyXilKz1pVeKuXOYdLJaDqawGGMD945KtgHtdqsQZ/wYqMyvugaoTa2VAizMVF08/H2Tn5SpQ8pcICSKW1BI2FcmGgwWXd4gq9mF7/seX5z7dFq+U+rbyCW6ZnHbY3WySBJrt2LpA+A+7Uoqklkt8sx0n2o+17CPzoKW8geHjX8xGAxF74fHnsNFaGhkDzwnbYH717cyb1SXndy/7mt2uvXn1ZFQS0flZ9sCzHR3pGbL7d3oCF/Wd6NTJqlnZVw9eEoTfb9L6mEOto=
+sidebar_class_name: "post api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload user asset"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/assets"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+In detail, two file are uploaded: the asset and its description. The description is uploaded on an IPFS local node
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"ethAddress":{"type":"string"},"alias":{"description":"The alias of the asset","type":"string"},"filename":{"description":"The asset and descriptions files.","type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Upload ok","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"The id of the asset","type":"number"},"NftAddress":{"description":"The wallet address of the user. The address is in EIP-55.","type":"string","example":"0xf9692336d7f37336c2061a545d8b2895b1415efe"},"cid":{"description":"Content Identifier","type":"string"},"alias":{"description":"The alias of the asset","type":"string"}},"title":"AssetResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
