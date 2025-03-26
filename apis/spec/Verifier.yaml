@@ -5,7 +5,7 @@ info:
 paths:
   /api/challenges/{did}:
     get:
-      summary: Retrieve a nonce
+      summary: Retrieve nonce
       operationId: get_challenge
       description: 'Create a new challenge to be solved, associated with the provided did'
       tags:
@@ -46,7 +46,7 @@ paths:
                 did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6
   /api/verify/vp:
     post:
-      summary: verify VP
+      summary: Verify VP
       operationId: verify VP
       description: 'Verify a Verifiable Presentation in JWK format'
       tags:

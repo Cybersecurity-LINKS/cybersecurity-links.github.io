@@ -54,8 +54,8 @@ const config = {
           // ... other options
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          // docRootComponent: '@theme/DocPage',
-          // docItemComponent: "@theme/ApiItem", // Derived from https://docusaurus-openapi.tryingpan.dev/#configuring-the-theme
+          //docRootComponent: '@theme/DocPage',
+          docItemComponent: "@theme/ApiItem", // Derived from https://docusaurus-openapi.tryingpan.dev/#configuring-the-theme
         },
         // blog: {
         //   showReadingTime: true,
@@ -103,33 +103,40 @@ const config = {
         // ... other options
       },
     ],
-    // wait for Docusaurus v3.0 compatibility
-    // [
-    //   // https://docusaurus-openapi.tryingpan.dev/
-    //   "docusaurus-plugin-openapi-docs", 
-    //   {
-    //     id: "openapi",
-    //     docsPluginId: "classic",
-    //     config: {
-    //       // issuer: {  // is considered the <id> that you will reference in the CLI
-    //       //   specPath: "apis/spec/issuer.yaml",
-    //       //   outputDir: "docs_mediterraneus/apis/issuer",
-    //       //   sidebarOptions: {
-    //       //     groupPathsBy: "tag",
-    //       //     categoryLinkSource: "tag",
-    //       //   },
-    //       // },
-    //       connector: {
-    //         specPath: "apis/spec/connector.yaml",
-    //         outputDir: "docs_mediterraneus/apis/connector",
-    //         sidebarOptions: {
-    //           groupPathsBy: "tag",
-    //           categoryLinkSource: "tag",
-    //         },
-    //       },
-    //     },
-    //   },
-    // ],
+     [
+       // https://docusaurus-openapi.tryingpan.dev/
+       "docusaurus-plugin-openapi-docs", 
+       {
+         id: "openapi",
+         docsPluginId: "classic",
+         config: {
+            issuer: {  // is considered the <id> that you will reference in the CLI
+              specPath: "apis/spec/issuer.yaml",
+              outputDir: "docs_mediterraneus/API/Issuer",
+              sidebarOptions: {
+                groupPathsBy: "tag",
+                categoryLinkSource: "tag",
+              },
+            },
+           connector: {
+             specPath: "apis/spec/connector.yaml",
+             outputDir: "docs_mediterraneus/API/Connector",
+             sidebarOptions: {
+               groupPathsBy: "tag",
+               categoryLinkSource: "tag",
+             },
+           },
+           verifier: {  // is considered the <id> that you will reference in the CLI
+            specPath: "apis/spec/Verifier.yaml",
+            outputDir: "docs_mediterraneus/API/Verifier",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
+         },
+       },
+     ],
   ],
   stylesheets: [
     {
@@ -259,7 +266,8 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'] //, "docusaurus-theme-openapi-docs"], 
+  themes: ['@docusaurus/theme-mermaid', "docusaurus-theme-openapi-docs"], 
+  //themes: ["docusaurus-theme-openapi-docs"], 
 };
 
 export default config;

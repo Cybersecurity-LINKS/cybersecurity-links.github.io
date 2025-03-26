@@ -1,0 +1,71 @@
+---
+id: get-challenge
+title: "Get challenge"
+description: "Get a challenge to request a credential"
+sidebar_label: "Get challenge"
+hide_title: true
+hide_table_of_contents: true
+api: eJydlMFu2zAMhl9F4GkDjCRtsYtvxVYUvQ1degpyYCQmVmdLikh3LQy/+0A7TdLNK9AdTesnP/4i1YEjttkn8TFACbckBo2tsK4p7MhINJn2LfEQzuQoiMcaCkiYsSGhzFCuOvCq3reUX6CAgA1BCc47KP4osKzIOO9M3BqpyLRM2fyqoqmQtRj7XRh+HBFmUIAi+EwOSsktFcC2ogah7CaSt8HvWzJ+IN16yloKDSe0ZDNuBQqQl6R8LNmHnX57qTXwzTvo+7UW5BQDE2uNy8ViutQbmzY0wJNTYBuDUBCVYUq1t6iy+SOrtvsn/7XJGFxsTplPsHHzSFbemLGCEIMlWBeQckyUxY/EY/hD6Q9e9P3Jja/HU32v8S9TPjwEek5khZyhnGP+SPPvddYQM+4menv9MdFd1TYYTCZ0uKlp5DGv59/r9GYg78c2G5IqOihhRzLMuVRQwvzoGUMBTPnpdfLbXEMJlUgq5/M6WqyryFJeXV5czTF50HnyYRuVWEUj7WJ2MVucjd4dc0vZXH+/m1gZz8ZF2zYUxHAiq3PNw5rc3/xYqshsYx4ChzwK6C3NoC8gRZYGB+8Pi6lbfj4Db+p1pwv8wHNwMFfoWeapRh+08mBNd7BwBWcWrgtQlzTadRtkesh132t4fEPUWOdZ79FBucWa6R3MT/eHyfls/ut9mYT/SS/HN+wJ61ZPDJf5hNkrGJSrdV9ARegoD8Sj5NpaSnKm+msLNMtxzG5vltD3vwFMPuZL
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Issuer/issuer-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get challenge"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/challenges"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a challenge to request a credential
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"query","name":"did","description":"The did of the user who has to sign the challenge.","required":true,"schema":{"description":"The unique identifier of a spacecraft","type":"string","title":"Did"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The challenge to be signed.","content":{"application/json":{"schema":{"description":"A random challenge","type":"object","required":["nonce"],"properties":{"nonce":{"description":"A random challenge","type":"string"}},"title":"Challenge"}}}},"500":{"description":"Unexpected error","content":{"application/json":{"schema":{"type":"object","required":["message"],"properties":{"message":{"description":"A human readable error message","type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

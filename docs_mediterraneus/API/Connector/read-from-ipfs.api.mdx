@@ -1,0 +1,71 @@
+---
+id: read-from-ipfs
+title: "Read from IPFS"
+description: "Read the contents of a file that has been added to IPFS."
+sidebar_label: "Read from IPFS"
+hide_title: true
+hide_table_of_contents: true
+api: eJylks1u2zAQhF+FmFMLELaT9sRbUKRFTg0c92T4QIsri4hEKuQqqCHw3YuVlDR/6KUnkQtq59vZGeEoV8n37GOAwZasU9yQqmJgCpxVrJVVtW9JcWNZNTarI1FQ1jlyiqO6uf1+t4IG21OG2eMnN5Rw0MhUDcnzGWY/4kg2UboauIHZH8pBI1HuY8iUYUZcbjbyeQvDQwoTzgSQBK5OsZs0UYpGb5PtiCnlSSXYjmBQeQcNLz16yw30m8bf5uHUjaPAvvaUIDwPg0/kYDgNpJGrhjorVHzupWvm5MMJReA74iY6GJyIoWcVg3XlXV6PlXcFMn96fAIbUguDhrk363UbK9s2MbO5uPzyFeWFV3ciOlvy0rFnBumAhU3u86PJCh/qKC9Fcx5zs7pYbWQznluaxw5UcUzq6vbmnSm7xmflYjV0Yk3uqRJn8mT/9vpuJz+pOqap8LeVTOkrWkG2ETN3NgjFsont65W90RyxxOw/kzd7w/Sb131rfRCWyfFx2cxeIpGhYSQaBw1xX8rjeLSZfqW2FCk/DJQkrweNR5u8PYpv+xHOZzk7mNq2mf4xxqftEqPP6sOUfci6FG04Q4TbQW7QuKfzkuZyKC9C9+N6Bw37OhpLFPTTQbg/bDyO84tdvKdQyrMOy12USvkDwkRgxw==
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Read from IPFS"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/cids/{cid}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Read the contents of a file that has been added to IPFS.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"cid","in":"path","description":"Content Identifier","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Return the file read from IPFS"}}}
+>
+  
+</StatusCodes>
+
+
+      
