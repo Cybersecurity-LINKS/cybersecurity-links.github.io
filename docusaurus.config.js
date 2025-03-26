@@ -54,8 +54,8 @@ const config = {
           // ... other options
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          // docRootComponent: '@theme/DocPage',
-          // docItemComponent: "@theme/ApiItem", // Derived from https://docusaurus-openapi.tryingpan.dev/#configuring-the-theme
+          //docRootComponent: '@theme/DocPage',
+          docItemComponent: "@theme/ApiItem", // Derived from https://docusaurus-openapi.tryingpan.dev/#configuring-the-theme
         },
         // blog: {
         //   showReadingTime: true,
@@ -83,33 +83,60 @@ const config = {
         // ... other options
       },
     ],
-    // wait for Docusaurus v3.0 compatibility
-    // [
-    //   // https://docusaurus-openapi.tryingpan.dev/
-    //   "docusaurus-plugin-openapi-docs", 
-    //   {
-    //     id: "openapi",
-    //     docsPluginId: "classic",
-    //     config: {
-    //       // issuer: {  // is considered the <id> that you will reference in the CLI
-    //       //   specPath: "apis/spec/issuer.yaml",
-    //       //   outputDir: "docs_mediterraneus/apis/issuer",
-    //       //   sidebarOptions: {
-    //       //     groupPathsBy: "tag",
-    //       //     categoryLinkSource: "tag",
-    //       //   },
-    //       // },
-    //       connector: {
-    //         specPath: "apis/spec/connector.yaml",
-    //         outputDir: "docs_mediterraneus/apis/connector",
-    //         sidebarOptions: {
-    //           groupPathsBy: "tag",
-    //           categoryLinkSource: "tag",
-    //         },
-    //       },
-    //     },
-    //   },
-    // ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-zkryptium',
+        path: 'docs_zkryptium',
+        routeBasePath: 'zkryptium',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-jpt',
+        path: 'docs_jpt',
+        routeBasePath: 'jpt',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      },
+    ],
+     [
+       // https://docusaurus-openapi.tryingpan.dev/
+       "docusaurus-plugin-openapi-docs", 
+       {
+         id: "openapi",
+         docsPluginId: "classic",
+         config: {
+            issuer: {  // is considered the <id> that you will reference in the CLI
+              specPath: "apis/spec/issuer.yaml",
+              outputDir: "docs_mediterraneus/API/Issuer",
+              sidebarOptions: {
+                groupPathsBy: "tag",
+                categoryLinkSource: "tag",
+              },
+            },
+           connector: {
+             specPath: "apis/spec/connector.yaml",
+             outputDir: "docs_mediterraneus/API/Connector",
+             sidebarOptions: {
+               groupPathsBy: "tag",
+               categoryLinkSource: "tag",
+             },
+           },
+           verifier: {  // is considered the <id> that you will reference in the CLI
+            specPath: "apis/spec/Verifier.yaml",
+            outputDir: "docs_mediterraneus/API/Verifier",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
+         },
+       },
+     ],
   ],
   stylesheets: [
     {
@@ -134,10 +161,10 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            docsPluginId: 'docs-mediterraneus',
+            docsPluginId: 'docs-zkryptium',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Mediterraneus',
+            label: 'ZKryptium',
           },
           {
             type: 'docSidebar',
@@ -145,6 +172,20 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Embrave',
+          },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'docs-mediterraneus',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Mediterraneus',
+          },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'docs-jpt',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'json-proof-token',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -162,12 +203,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Mediterraneus',
-                to: '/mediterraneus',
+                label: 'ZKryptium',
+                to: '/zkryptium/intro',
               },
               {
                 label: 'Embrave',
                 to: '/embrave/intro',
+              },
+              {
+                label: 'Mediterraneus',
+                to: '/mediterraneus',
+              },
+              {
+                label: 'json-proof-token',
+                to: '/jpt/intro',
               },
             ],
           },
@@ -217,7 +266,8 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'] //, "docusaurus-theme-openapi-docs"], 
+  themes: ['@docusaurus/theme-mermaid', "docusaurus-theme-openapi-docs"], 
+  //themes: ["docusaurus-theme-openapi-docs"], 
 };
 
 export default config;

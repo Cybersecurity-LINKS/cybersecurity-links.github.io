@@ -1,0 +1,71 @@
+---
+id: get-asset-information
+title: "Get asset information"
+description: "Get asset information"
+sidebar_label: "Get asset information"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1P4zAQ/SvRnHYlbz9pgdwqhFAvKwTsqerBsSfEbGIb22Gpovz31ThJKaWVyCXJzPjNezMvaSDwZw/pBlbeY/CwZeDQW6M9ekgbmE0mdJPohVM2KKMhhacCE071idK5cRWn+AgYCKMD6kAnuLWlEjEzfvF0rAEvCqw4PYWdRUjBZC8oAjCwzlh0QXVNlTzdU8nE5EkYugMbcHRdZeigZfA7DyspHXp/GuIfL0sMCe9qBrjaoxslUVafUD5ROrld3/9aLEYfjXxwSj8DA3znlS0pNHnPr5fXs/l8KS/z+eV8vhSzyXLKFxcLeZXNrq4X2fRiusAciZ84pe2mG1uylqiDyhW6Lx1bBrxU/IyqmDozmwGgZRBUiJTjrh/6NUNLFztCvaMhHa+YFsUdrzCgI9M0oHlFgLFyLeEYhbjVWr3WtLtB2zFPRZWWhwLIe6+1cighDa5GduCYbwJzfUb/h/qBbNtuGVQYCiMhhed4JtJIYRxr/Ljpa1tg4NG9DbJrV0IKRQg2HY9LI3hZGB/S6Wx+AYTqUdROhd0j0e88nSF36FY14e/9TwjQq6T3rijuisZOldSz0zwZTUeTAx03RmsUwbhkdb8+MXrlE2lEXZGzvEVBM/Jx8g+3j090KMmNi4EPKFKpBI7IcNb4UPH45fZ7PueKT6336gK+h7EtudKEFmfW9BPedFvwwCAd9rFlQFOkZNNk3OMfV7YthV9rdDtIN1sGb9wpnpH+TQNSeXqWkOa89PiFx/53BD8eemP9TL7lyZMK+iDXOyAiZU1vwOAv7g5ttW0ZFMglukiyy66EQBsOzn35P35y493tE7Ttf9Xe6Rw=
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get asset information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/assets/{assetId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get asset information
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"assetId","description":"The unique identifier of the asset","in":"path","required":true,"schema":{"description":"The unique identifier of an asset","type":"string","title":"assetId"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The asset information.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"The id of the asset","type":"number"},"NftAddress":{"description":"The wallet address of the user. The address is in EIP-55.","type":"string","example":"0xf9692336d7f37336c2061a545d8b2895b1415efe"},"cid":{"description":"Content Identifier","type":"string"},"alias":{"description":"The alias of the asset","type":"string"}},"title":"AssetResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

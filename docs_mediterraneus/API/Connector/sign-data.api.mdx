@@ -1,0 +1,71 @@
+---
+id: sign-data
+title: "Sign data"
+description: "Sign the provided data with the identity private key."
+sidebar_label: "Sign data"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVD1v2zAQ/SvETS3A2E7aSVuaZHCXBLGLDoaHs3i22EokQ1JOBEH/vThKtuI4DdBqosj7eu/eXQuKQu61i9oayGChd0bEgoTzdq8VKaEwonjWsUjXWpGJOjbCeb3HSOI3NROQEHEXIFvBvH/XFGAtwaHHiiJ5fmvBYEWQwSHGXIEEzVkdxgLkm1Lmt8JuT5JyIk9PtfakIIu+JgkhL6hCyFqIjePopq425KHr1r0xhfjNqoYt3vrm1kQykZ/QuVLnyKmnvwLnb1+FHh1X4LApLaoEz1tHPoHN2uND1r4BsiyoZzFasSER9M4QQx8KDtFrs4NOgrEmp3P/+3TAUvTvZ47pY7DBWRP6Yq5ms/NAt1xEn/7jjsI/cHNKQgiaJYSx9u8gOT4JbcT3nwuxtb7C+BdInYSKYmEVK8QGNktCyWCqjzKbtqOcuimDu2CuQUIgvz8or/YlZFDE6LLptLQ5loUNMbu8+vIVWCiB8trr2CwYVo9kQ+jJX9ec8CgujgCD6Pi/NwIulZl5HPV294KVK+lEGAd4x06/6r02W8vGXHJP1mxyOZkxNTpyHLixxlAerRfXD/OzaVkWOghl87oiE0VwlOutppBa/Hi3WLIT050uxlBMks5pwiUwxxWm9g6TmrbBQOdJunbUx/+vjJ7SSC9x6krUhmtIjWqHPq9g7DNIyE4Wx9jqtQTuJtu37QYD/fBl1/H1U02+gWy1lrBHr3HDRK5aUDrwWUG2xTLQB+A+PQ6j/1m8v4/eRTFcouFJ2mNZ8x9I4NE62X/dupNQECryqbDe4KZPf7HkMGOAszns5MHjOs/JxQ9t16+m6eF+sQQJm2EvVlaxj8dnXrD43BdrEx1pFtJdCyWaXY07tu1j8vcHp90rHA==
+sidebar_class_name: "post api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sign data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/identities/{identityId}/sign-data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sign the provided data with the identity private key.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"identityId","in":"path","description":"ID of the identity.","required":true,"schema":{"type":"number"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"required":["payload"],"properties":{"payload":{"description":"The data to be signed","type":"string"},"nonce":{"description":"Optional nonce","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Data signed with the identity private key","content":{"application/json":{"schema":{"properties":{"ssiSignature":{"description":"Signature in JWS format","type":"string"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
