@@ -1,0 +1,71 @@
+---
+id: update-nft
+title: "Update NFT"
+description: "Update the NFT address of the asset."
+sidebar_label: "Update NFT"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVUtP5DAM/iuVT7tSmSfDo7dZBFouCLHDCc3Bk7g0bNuExAVG1fz3ldvCPKhYeovj2J+/z3Zr0BSUN46NLSGBe6eRKeKMopurRYRaewohsmljwhCIBxAD42OA5AHmYgiwjMGhx4KYvNhrKLEgSABzgwHigyQLCSU3e3EjthEqRSFIBiOOzxX5NcTg6bkynjQk7CuKIaiMCoSkBl47yRPYm/IRNptl60yBf1m9Fo/Dt8qWTCXLFTqXG4WCavgUBFq9E9p568izoSCnMuV5S4aceurZZ0rI4ww58uQ8BSr5gMAD3PIJ9OBsGdqMk9GoP1XVaKQ71kyZWl80RUjgb5fXIbCrJ1IM8UG5RvfnNnpPs20lZVWsyMMmhpv/MPWKeU58SFgVyA+iXSZNiEwZXV7fHs1mnymLgd6wcLmYRm/p+cn5ZDo90afp9HQ6PVGT0ckYZ8czfbaanJ3PVuPj8YxSEnyqr7aLlrboWlPJJjXkP4sUd+3cr/+nfu5ROQY23EBuBueukxs6+QvizGpIwCGrTDRBziCBIbZjFkMg//I+YpXPIYGM2SXDYW4V5pkNnIwn02OQOQikKm94/Uckb1VdEXry80qifnSARIBupuTcOjVopWvutuN0+c74/jjsECTNKNcCsuVmNBgPRrAt/MKWJSm2PprfXvdsBhMibVVViBjBkRItQkPq3eWfhTyKUusbwzaU0GIUDQSCs4ELbJq9W0LdTru5Whzmq7fj8u3N15LG9MZDl6MpJWcjRd3J9QD4sRVFEbHU9QoD3ft8sxFzu9dERG0CrnLZTinmgb7A9+OuW2Q/o+/sz16cf2m9s5RfMK/Ep+mWF/RGkEDysNzEkBFq8g3E9lE3IEcLibt9+2nHbOL3F3OlyPGXvsudnr+dLy5+Qwyrbm8XVssjj6/yA8BXARqDbZhpmrmx1ZBj+Vjho/i2QeX7B7ksVMw=
+sidebar_class_name: "patch api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update NFT"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/assets"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update the NFT address of the asset.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"alias","description":"The alias of the asset to access.","in":"query","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"properties":{"nftAddress":{"description":"The address of the NFT that represent the asset.","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The updated asset information.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"The id of the asset","type":"number"},"NftAddress":{"description":"The wallet address of the user. The address is in EIP-55.","type":"string","example":"0xf9692336d7f37336c2061a545d8b2895b1415efe"},"cid":{"description":"Content Identifier","type":"string"},"alias":{"description":"The alias of the asset","type":"string"}},"title":"AssetResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

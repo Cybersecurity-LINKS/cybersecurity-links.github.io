@@ -103,7 +103,6 @@ const config = {
         // ... other options
       },
     ],
-    // wait for Docusaurus v3.0 compatibility
      [
        // https://docusaurus-openapi.tryingpan.dev/
        "docusaurus-plugin-openapi-docs", 
@@ -113,7 +112,7 @@ const config = {
          config: {
             issuer: {  // is considered the <id> that you will reference in the CLI
               specPath: "apis/spec/issuer.yaml",
-              outputDir: "docs_mediterraneus/apis/issuer",
+              outputDir: "docs_mediterraneus/API/Issuer",
               sidebarOptions: {
                 groupPathsBy: "tag",
                 categoryLinkSource: "tag",
@@ -121,12 +120,20 @@ const config = {
             },
            connector: {
              specPath: "apis/spec/connector.yaml",
-             outputDir: "docs_mediterraneus/apis/connector",
+             outputDir: "docs_mediterraneus/API/Connector",
              sidebarOptions: {
                groupPathsBy: "tag",
                categoryLinkSource: "tag",
              },
            },
+           verifier: {  // is considered the <id> that you will reference in the CLI
+            specPath: "apis/spec/Verifier.yaml",
+            outputDir: "docs_mediterraneus/API/Verifier",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
          },
        },
      ],
