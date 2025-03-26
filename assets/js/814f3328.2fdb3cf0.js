@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmediterraneus_docs=self.webpackChunkmediterraneus_docs||[]).push([[2535],{45641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[]}')}}]);
