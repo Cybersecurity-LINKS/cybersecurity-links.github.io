@@ -1,0 +1,71 @@
+---
+id: find-asset-by-alias
+title: "Find asset by alias"
+description: "Find asset by alias"
+sidebar_label: "Find asset by alias"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SsCTxvg5bNJW9+Coht6GYq2OwU9yBJdq7MlVaK7BoH/+0DZSdvFh+USmCLf48cj90DyKUK+hU2MSBEeM/AyyAYJA9v3YGWDkIOsjYyQgcaogvFknIUcHioU6UW4UhB/MIwgJ6RSGOMEMjDs+NJi2EEGAV9aE1BDTqHFDKKqsJGQ74F2nnkiBWOfoOse2Tl6ZyNGfl/MZvw3wp8ojS1daCTbmVQ5S2iJI6T3tVHpZfocOWx/SuuKZ1QEGfjgPAYyPanR45xGfyoYsgOObZsCA3QZ/Cxpo3XAGMch/si6RhKy9znAtRHDRKSyhgcThbHi+ub222o1eSca+pQBvsnG12yavZWX68vFcrnW5+XyfLlcq8VsPZers5W+KBYXl6tifjZfYYmcnxqr7apvm7jRaMmUBsMJY5cNWhgfxokYTgG6DMhQSjmp7m4YM3T8+1di343Vw4yLnTjIsEGqnIYcnhKDl1RBDlPZqziDiOH1oOA21JBDReTz6bR2StaVi5TPF8szYJlFVG0wtLtnUfRzL1AGDJuWUY8aYQQYJMvfvVOqh9XHnszZpz2bzCczeK/0ylmLilwQm9ubkT0yUWin2oa7Hz0qbn5MXby7vn/gIFG6kAzvUFylUTjhoXgXqZFJ3cPKjnfuE/GxNsI3mvpaGstYqWP7oatbkMfbwI1jy35fyIi/Qt11bO63m3utTZRFzftdyjriCd1xL+HL3XAKvor/uSKjef7G3YfT9Crrln3SUF9lMJwJ5NvHLoMKpcaQUuyDNkqhpw9RJ2eCUY4y+3H9AF33FybOwHQ=
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Find asset by alias"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/assets"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Find asset by alias
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"alias","description":"The alias of the asset to access.","in":"query","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The asset information.","content":{"application/json":{"schema":{"type":"object","properties":{"id":{"description":"The id of the asset","type":"number"},"NftAddress":{"description":"The wallet address of the user. The address is in EIP-55.","type":"string","example":"0xf9692336d7f37336c2061a545d8b2895b1415efe"},"cid":{"description":"Content Identifier","type":"string"},"alias":{"description":"The alias of the asset","type":"string"}},"title":"AssetResponse"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

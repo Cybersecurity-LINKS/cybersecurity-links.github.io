@@ -1,0 +1,71 @@
+---
+id: download-the-asset
+title: "Download the asset"
+description: "Asset download, verifiable presentation and proof of purchase verification are performed"
+sidebar_label: "Download the asset"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1UkFu2zAQ/AqxpxYQbCftiTejTYLcAts9GT7Q1MoiSpHK7sqtIejvxUpykwZB0UtPAsnR7OzM9FAiewqthJzAwpoZxZT5R4rZlYU5I4UquGNE0xIyJnGKNC6VpqWcK5Mr03bka8c4o/0MITQtUpWpwRIKEHdisPtpBMOhAEJuc2JksD3crlb6+VPOBqWjZKRGU4WIhtCVpqLcmMen+y0MQwGtI9egICl5D8k1CBZcDI6heEO3q9GML6paSd24rmTjvEfmBRQQFPjcIV1AFT53gbAEK9RhAexrbJzqlEurc1gopBMMw6GABqXOJVg4oYAKkxosLMcZvLx6CgUw0vmqt6MIFmqR1i6XMXsX68xib24/fQYlZfQdBblsdfLk1BEdIa07pf8tRBlgFqjnCTQ6FFKVFakzJx9Wi5vFSiMJEhX8JaeEXjKZ9dPjO64FNmX2XYNJDLfoQxWQRwM3d9ud/mSqTOPFC5VuGTwuQEPKLI1LqmIO6Otsx0sMb+f24HMSTPKfazn5J/hTlm10IaneMZV+jnAPU4Qq8BrioQDNSR/7/ugYv1EcBr2eqqPRloFVYQm2cpHxL+t92Mw9+2j+paLvSv6Ol1e9P7vYKWbs0NnR6BXY/WF41dOHux0Mwy8pHGMW
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download the asset"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/assets/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Asset download, verifiable presentation and proof of purchase verification are performed
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"alias","description":"The alias of the asset to access.","in":"query","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Return the file read from IPFS"}}}
+>
+  
+</StatusCodes>
+
+
+      

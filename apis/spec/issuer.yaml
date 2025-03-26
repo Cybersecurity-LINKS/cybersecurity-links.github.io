@@ -11,7 +11,8 @@ servers:
 paths:
   /challenges:
     get:
-      summary: Get a challenge to request a credential
+      summary: Get challenge
+      description: Get a challenge to request a credential
       parameters:
         - in: query
           name: did
@@ -34,7 +35,7 @@ paths:
                 $ref: '#/components/schemas/Error'
   /credentials:
     post:
-      summary: Issue a verifiable credential for the user
+      summary: Issue VC
       description: Issue a verifiable credential for the user, the credential is signed with the issuer private key and it is encoded as JWT
       operationId: "create_credential"
       responses:

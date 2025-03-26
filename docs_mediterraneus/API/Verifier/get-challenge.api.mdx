@@ -1,0 +1,71 @@
+---
+id: get-challenge
+title: "Retrieve nonce"
+description: "Create a new challenge to be solved, associated with the provided did"
+sidebar_label: "Retrieve nonce"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdlU2P2zYQhv8KMacW0MayLPlDt6AbFL4UxW6ay8IIxuTIYiKLDEk5awj878VIytrbXSx6SC89WRx+DN/nHY57MJYcBm3arYISDhQ+yxqbhtoDQQKKvHTa8jyU8JsjDCRQtPRdPC0TwYg9CW+aE6lEoPdGagykxHcdahFqEtaZk1akhNIKEgh48FA+wB+mlQS7BBx5a1pPHsoesjTln+ep7zspyfuqa5qzkMM9+CRp2kBt4PVobaPlIGX2xfOmHrys6Yj8Fc6WoASz/0IyQALWsfCgx5TtcJHLMh+cbg+QAD3i0TYcWsl0tawW+U0xV4ubfL4pbnCB+c0m26hMVWu13EuILOVbRz6Q+8xa3zxSaVVqE7Bs2q9l+iiX6Sbb57lUeZZV+0oqzGm/Xi7SPM/W1V7lUq7m64pynMuF3GRqPS9WtCzW6ywt5JKz06PVo51vp56vss1yla6yTVGsIMYEgg7DzMX9GDmeZ9lLNz7WJG63txdftRetCeKEjVbCuGHgO2uN+6k++YCh869Ka7sjl5Qf64QjzhkHu5jAkbzHwyv+Xusel8crSJd00+TVSXA32iwsOjxSIPcDAU4Qbre3E8HitXretoFci424J3ciJz5MGf53oAZh4sc4jkieqHEb6KHF4/QeIAHNeCyG+kX74YoLNQZGzd1Gt4ehu1w3LH5+2pGCMriOnvEM9BhmtkE9kPwPn2GMOyYQajO1VLaHBZUwQ6tnT/f1s15pFSEBP1TBSKNzDZRQh2DL2awxEpva+FDOs0UBfLIn2TkdzvdcC4PdkalVZhA5ufSJnK40OfH+zy0kwIePENN36bs522eND0ccWEz87yg4TScSYzv8B/7+wvLn/RGMVXblTExG/f1E7AHQan4XT8wggZJ37xJgLryk7/fo6S/XxMjhbx25M5QPuwRO6DTumchDD0p7/lZQVth4ekPfL3dTGf0q/k3RvSpjCmJ7Zv7YdDyCBL7Sear1yG+uJlTkhvuNM++lJBuu9rzoA8/K6/cPHyHGvwFA258v
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Verifier/verifier-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve nonce"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api/challenges/{did}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new challenge to be solved, associated with the provided did
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"did","in":"path","description":"DID that is solving the challenge","required":true,"content":{"text/plain":{"example":"did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6"}}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully created","content":{"application/json":{"schema":{"type":"object","properties":{"nonce":{"type":"string","example":"7c076f34-51d3-4195-a3a4-929d2df8d6bc"},"requester_did":{"type":"string","example":"did:iota:lnk:0xc6092b44cd422fbfcda4eb86304428fbd4cc718fe4a1c3c92d8157e6588205c6"},"expiration":{"type":"string","example":"1729670729557"}},"title":"challenge"}}}},"422":{"description":"The DID provided is not valid or not supported","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["success","error"]},"message":{"type":"string"}},"title":"error"},"example":{"status":"error","message":"Request parameter is not a valid DID"}}}},"500":{"description":"Internal Server Error","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["success","error"]},"message":{"type":"string"}},"title":"error"},"example":{"status":"error","message":"Error message"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

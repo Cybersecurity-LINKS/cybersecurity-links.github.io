@@ -1,0 +1,71 @@
+---
+id: get-challenge
+title: "Get challenge"
+description: "Get a challenge to access a service"
+sidebar_label: "Get challenge"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFO20AQ/ZXVnFrJIiYhNPgWUYR6agXhhDiMdyfxUnvX7I4haeR/r8YOSYAoKr0l45k3772dmTUYijrYmq13kME1sUKlCyxLcgtS7BVqTTEqVJHCs9UECTAuImT38JMLCvCQQI0BK2IKEl6DFainhsIKEnBYEWRgrIHkXbdZQcpYo/xccUGqiRTUS+FVgVE6R7tw3YctnxNIINBTYwMZyDg0lEDUBVUI2fod+FShcvSieFWTdLCGHNu5paC4QFbkMC8pqmcKdm7ld6IMaXIcsLR/yChjF5ax3FTySroLGmQQOVi3gARoiVVdbgRm1jNmoYpZusxTHOvx6GI8wuEEzXA+mkzSPL2YfJsMz8d0MTF5mpvR/OLcnJ6f58PRiPTkTBs0eT48G+bSy3KH/N0aaNsHkR5r7yJFUTtM04+iZ/tuiYc5dTaSEfLaOybHUoZ1XVqNUjZ4jFK7PuJkQGd8tUPeGeHzR9L85lnuwXmnqZuL4GsKbHvGffhT8Buf23bnxuU2q20lPj7kw52jZU2aySgKwYfPiD+mrKIYcXFA2+uHA+qKpkKnAqGRIev5qNf8Y0qvOuZtL7MiLryBDBYkpGrkAjIYbD2LkIBs6OsONqGEDArmOhsMSq+xLHzk7HQ4OgOZpUi6CZZXt6K715ATBgrTRpC3NggCbLZM/vdJHU/r5l4ypWcvNj05PUn3JvfSO0eafVDTXz8OrL+NynjdVORYxZq0rGfsVv7m6nYmRWruQxfYQW3u0Am0CdQ+coXdA27ujFyw/UF603K9m4J/PXW9C0xLHtQlWiddO2/Xmze4h703eEhAbJboep1jpLtQtq2E+3MoL2NslEEwkM2xjHSE4pebzeh9Vf91Kg+S/02r7Tl+xrKRjG4injF0ZxCy+4c2gYLQUOgY9yVTranmvaoPayQo2zm9vppB2/4FldssiA==
+sidebar_class_name: "get api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get challenge"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/challenges"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a challenge to access a service
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"query","name":"did","description":"The did of the user who has to sign the challenge.","required":true,"schema":{"description":"A a new type of identifier that enables verifiable, decentralized digital identity.","type":"string","example":"did:iota:rms:0xb0a5c53953a28ad2f3880b09878265e98db0bd3f96d166b233ec84cdadbb242b","title":"Did"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"The challenge to be signed.","content":{"application/json":{"schema":{"description":"A random challenge","type":"object","required":["nonce"],"properties":{"nonce":{"description":"A random challenge","type":"string"}},"title":"Challenge"}}}},"500":{"description":"Unexpected error","content":{"application/json":{"schema":{"type":"object","required":["message"],"properties":{"message":{"description":"A human readable error message","type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

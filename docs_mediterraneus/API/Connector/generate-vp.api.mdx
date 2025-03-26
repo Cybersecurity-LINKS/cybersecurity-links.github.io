@@ -1,0 +1,71 @@
+---
+id: generate-vp
+title: "Generate VP"
+description: "Generate a verifiable presentation for the corresponding identity."
+sidebar_label: "Generate VP"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1v2zAM/SsCL9sAN0m7nXzrumLILi3arDsEOSgWY2u1JVWi0xqG//tAOc5nWwzDfLIlfjw+PtItKAyZ1460NZDCdzToJaGQYo1er7Rcliicx4CGJBuJlfWCChSZ9R6Ds0Zpkwut0JCmZgQJkMwDpHOY9mcaAywScNLLCgk937VgZIWQwuA3VZCAZghOUgHJEa7pN2FXMe3gIOqASpAV+QCZb/eRQgIen2rtUUFKvsYEQlZgJSFtgRrH6U1dLdFD1y16Ywz01aqGLY59M2sIDfGVdK7UWUwy/h0YYLsXeuc4Byeb0koV6/fWoY9spC1khSxLNDnyx2GtV8PVUHLfCfRMbQ87kNcmhy4BpOJe50ZS7V8JdRNfZCm26UQYrEUduHGc4Jkv6UMQzus1U/mIDVOL1RKV0OY1ao+QxIc5ZEWEvsaLyeQU0sMbshraqFhBf831IakHEE8yz7ZUnmbXRvz4NWNtV5LeqK5LoEIqrGKR2sBmUaspjPVW6eN2p+hunKM5O+ItoF8PM1D7ElIoiFw6Hpc2k2VhA6XnF5+/ACsyYFZ7Tc0919uXuETp0V/WnHerYo4AG3Xzd28EjJgpu9sJ+/pFVq7EIwUOdR7LaU9n2qwsezH2ns7J6Hw0Yao0cUC4ssZgRtaLy9vpyQDPCh2EslldoSERHGYs6RCVdXd9P2On7WrZhWK2dIYjhsCcVzI2drM8ttvq4fY4YbvT0H9aaj3VhC80dqXUhiHFBrYbGcxhJwNIID1YbSdKWCTAzWa3tl3KgD992XV8/FSjbyCdLxJYSx/BRrUoHfhdQbqSZcB3Cv54t1lBn8Q/Ls5Xq90cStMAQytr/oIEHrE53OTdokugQKnQR+S9wVWP72zGYXYBTga8SwaPyyxDR+/aLvaG8vbmfgYJLDcLvLKKfbx85j+BfO7B2shXnKV41kIpTV7LOAd9TH7+AFJQgAs=
+sidebar_class_name: "post api-method"
+info_path: mediterraneus/API/Connector/connector-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate VP"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/identities/{identityId}/gen-presentation"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generate a verifiable presentation for the corresponding identity.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"identityId","in":"path","description":"ID of the identity used to generate the presentation","required":true,"schema":{"type":"number"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"required":["payload"],"properties":{"challenge":{"description":"Challenge of the verifier","type":"string"},"ethSignature":{"description":"Optional challenge signature using the wallet's private key to embed in the presentation","type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Verifiable presentation generated.","content":{"application/json":{"schema":{"properties":{"presentation":{"description":"The verifiable presentation in JWT format","type":"string"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
