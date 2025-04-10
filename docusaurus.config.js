@@ -103,6 +103,16 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-blns',
+        path: 'docs_blns',
+        routeBasePath: 'blns',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      },
+    ],
      [
        // https://docusaurus-openapi.tryingpan.dev/
        "docusaurus-plugin-openapi-docs", 
@@ -186,6 +196,13 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'json-proof-token',
+          },
+          {
+            type: 'docSidebar',
+            docsPluginId: 'docs-blns',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'BLNS',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
