@@ -12,7 +12,7 @@ Under particular choices he new assumption is shown to be equal to [Short intege
 
 ## BLNS as anonymous credentials scheme
 BLNS is an anonymous credentials scheme, so there are three entities involved: the **Issuer** certifies attributes of Holders, the **Holder** receives credentials about their attributes and
-uses them to authenticate to third parties, the **Verifier**  engages in a protocol with a Holder , and learns a subset of the attributes of the Holder.
+uses them to authenticate to third parties, the **Verifier**  engages in a protocol with a Holder, and learns a subset of the attributes of the Holder.
 
 ## Protocols & Core Functions
 
