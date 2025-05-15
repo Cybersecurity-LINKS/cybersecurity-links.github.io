@@ -16,21 +16,28 @@ sidebar_position: 3
 
 ```toml
 [dependencies]
-zkryptium = { version = "0.4.0", default-features = false, features = ["bbsplus"] }
+zkryptium = { version = "0.5.0", default-features = false, features = ["bbsplus"] }
 ```
 
 #### BBS+ Blind signature:
 
 ```toml
 [dependencies]
-zkryptium = { version = "0.4.0", default-features = false, features = ["bbsplus", "bbsplus_blind"] }
+zkryptium = { version = "0.5.0", default-features = false, features = ["bbsplus", "bbsplus_blind"] }
+```
+
+#### BBS+ per Verifier Linkability:
+
+```toml
+[dependencies]
+zkryptium = { version = "0.5.0", default-features = true}
 ```
 
 #### CL2003:
 
 ```toml
 [dependencies]
-zkryptium = { version = "0.4.0", default-features = false, features = ["cl03"] }
+zkryptium = { version = "0.5.0", default-features = false, features = ["cl03"] }
 ```
 **WARNING:** for CL2003 use a version from v0.3.2 onwards that uses a new secure cryptographic implementation of the Pseudo Random Number Generator [ThreadRng](https://rust-random.github.io/rand/rand/rngs/struct.ThreadRng.html)
 
@@ -43,6 +50,7 @@ You can run the examples based on the [BBS+](https://identity.foundation/bbs-sig
 ```
 cargo run --example bbsplus <ciphersuite>
 cargo run --example bbsplus_blind <ciphersuite>
+cargo run --example bbsplus_nym <ciphersuite>
 ```
 
 #### Available Ciphersuites:
@@ -56,7 +64,8 @@ cargo run --features="cl03" --example cl03_multiattr <ciphersuite>
 ```
 #### Available Ciphersuites:
 - CL1024-SHA-256
-
+- CL2048-SHA-256
+- CL3072-SHA-256
 
 # Test
 

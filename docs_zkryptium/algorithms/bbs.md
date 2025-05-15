@@ -17,4 +17,8 @@ The [Blind BBS Signature Extension](https://datatracker.ietf.org/doc/html/draft-
 Key features of the Blind BBS Signature Extension:
 - **Message Blinding**: This extension allows recipients to obscure (blind) their messages before sending them to a signer. This process ensures that the signer cannot learn the message's content.
 
-Together, the BBS Signature Scheme and its Blind Signature Extension offer a robust solution for privacy-preserving cryptographic systems, supporting applications in identity, authentication, and secure, anonymous transactions.
+### **BBS per Verifier Linkability**
+
+The [BBS per Verifier Linkability](https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-bbs-per-verifier-linkability-01) builds on the BBS scheme to enable a Verifier to be able to track the BBS proofs they receive from the same Prover  tih the use of pseudonyms. A pseudonym, is a value that will remain constant each time a Prover presents a BBS proof to the same Verifier, but will be different (and unlinkable), when the Prover interacts with a different Verifier. This provides a way for a recipient (Verifier) to track the presentations intended for them, while also hindering them from tracking the Prover's interactions with other Verifiers
+
+Together, the BBS Signature Scheme and its Blind Signature Extension and the BBS per Verifier Linkability offer a robust solution for privacy-preserving cryptographic systems, supporting applications in identity, authentication, and secure, anonymous transactions.
