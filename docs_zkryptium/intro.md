@@ -9,6 +9,7 @@ sidebar_position: 1
 **ZKryptium** is a cryptographic library written in Rust which provides an implementation in accordance with:
 * [BBS+ Signature Scheme](./algorithms/bbs.md#bbs) 
 * [Blind BBS Signatures](./algorithms/bbs.md#blind-bbs-signature-extension)
+* [BBS per Verifier Linkability](./algorithms/bbs.md#bbs-per-verifier-linkability)
 * [CL2003 Signature Scheme](./algorithms/cl03.md#cl03)
 
 
