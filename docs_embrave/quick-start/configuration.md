@@ -24,12 +24,8 @@ Follow the instruction in the [`config-file section`](./config-file.md) to popul
 TODO minimal configuration
 
 ## Verifier configuration
-Copy the goldenvalue database from the agent to the path defined by **db** the config file section [`[Verifier]`](./config-file.md#verifier) 
+Copy the goldenvalue database, generated with the goldenvalue_db_generator script from the agent to `/var/embrave/verifier/whitelist/` to the Verifier. The filename is set with **whitelist_uri** field in the config file section [`[Verifier]`](./config-file.md#verifier). For example with the default name:
 
 ```sh
-scp user@agent_ipd_addr:/home/user/embrave/goldenvalues.db <path_config_db>
-```
-e.g. for default value
-```sh
-scp user@agent_ipd_addr:/home/user/embrave/goldenvalues.db /var/embrave/verifier/db.sqlite
+scp user@agent_ipd_addr:/home/user/embrave/goldenvalues.db /var/embrave/verifier/whitelist/goldenvalues.sqlite
 ```

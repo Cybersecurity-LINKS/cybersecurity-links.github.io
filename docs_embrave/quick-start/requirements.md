@@ -5,16 +5,14 @@ description: "Instructions for installing the requirements"
 # Requirements
 The following dependencies must be installed:
 ```sh
-sudo apt-get install git make cmake gcc libssl-dev openssl build-essential autoconf-archive \
-libcmocka0 libcmocka-dev procps iproute2 pkg-config automake uthash-dev autoconf doxygen \ 
-libjson-c-dev libini-config-dev libcurl4-openssl-dev uuid-dev libltdl-dev libusb-1.0-0-dev libftdi-dev
+sudo apt install git make cmake gcc libssl-dev openssl build-essential autoconf-archive libcmocka0 libcmocka-dev procps iproute2 pkg-config automake uthash-dev autoconf doxygen libjson-c-dev libini-config-dev libcurl4-openssl-dev uuid-dev libltdl-dev libusb-1.0-0-dev libftdi-dev
 ```
 **TPM2 Software Stack (TSS):**
 Install tpm2-tss software
 ```sh
 git clone -n https://github.com/tpm2-software/tpm2-tss
 cd tpm2-tss/
-git checkout 40485d368dbd8ad92c8c062ba38cd7eaa4489472 
+git checkout 4.1.3 
 ./bootstrap
 sudo ./configure --prefix=/usr
 sudo make -j8
@@ -30,6 +28,9 @@ sudo apt install mosquitto
 ```
 ## Attester requirements
 The following dependency must be installed specifically for the Attester application.
+
+* TPM2.0 installed
+* Enabled the Linux [Integrity Measurement Architecture (IMA)](https://ima-doc.readthedocs.io/en/latest/ima-intro.html) module with _ima-ng_ template and SHA256 hash
 
 **TPM2 Access Broker & Resource Manager:**
 
