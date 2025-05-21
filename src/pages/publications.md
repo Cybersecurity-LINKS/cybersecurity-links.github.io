@@ -38,6 +38,8 @@ D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 
 
 ## Proceedings
 
+L. Perugini and A. Vesco, “An efficient tls 1.3 handshake protocol with vc certificate type,” in *Proceedings of IEEE 22nd Consumer Communications Networking Conference*, Las Vegas, NV, USA, January 2025, pp. 1–9.
+
 A. Colombatto, L. Giorgino, and A. Vesco, “An Identity Key Management System with Deterministic Key Hierarchy for SSI-native Internet of Things,” in *Proceedings of the 19th International Conference on
 Availability, Reliability and Security*, Vienna, Austria, July 2024, pp. 1–6. \
 [Online]. Available: https://doi.org/10.1145/3664476.3669929
