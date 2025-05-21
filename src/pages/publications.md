@@ -38,6 +38,8 @@ D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 
 
 ## Proceedings
 
+A. Solavagione and A. Vesco, “Transition of Self-Sovereign Identity to Post-Quantum Cryptography,” in *Proceedings of 2025 International Conference on Quantum Communications, Networking, and Computing*, Nara, Japan, April 2025, pp. 174–181.
+
 L. Perugini and A. Vesco, “An Efficient TLS 1.3 Handshake Protocol with VC Certificate Type,” in *Proceedings of IEEE 22nd Consumer Communications & Networking Conference*, Las Vegas, NV, USA, January 2025, pp. 1–9.
 
 A. Colombatto, L. Giorgino, and A. Vesco, “An Identity Key Management System with Deterministic Key Hierarchy for SSI-native Internet of Things,” in *Proceedings of the 19th International Conference on
