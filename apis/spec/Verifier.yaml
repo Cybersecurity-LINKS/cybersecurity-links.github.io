@@ -72,6 +72,55 @@ paths:
                 message: "Failed to validate"
       requestBody:
         $ref: '#/components/requestBodies/verify_vp'
+  /api/verify/{nftAddress}:
+    parameters:
+      - name: nftAddress
+        in: path
+        description: 'NFT EVM Address'
+        required: true
+        content:
+          text/plain:
+            example: '0xF7F7a30fF5B75603A4C0d547426346F3FaEC4E94'
+      - name: authorization
+        description: 'Verifiable Presentation in JWT format'
+        in: header
+        required: true
+        schema:
+          type: string
+        example: >-
+          eyJraWQiOiJkaWQ6aW90YTpsbms6MHhjNjA5MmI0NGNkNDIyZmJmY2RhNGViODYzMDQ0MjhmYmQ0Y2M3MThmZTRhMWMzYzkyZDgxNTdlNjU4ODIwNWM2I2xhTUlNUlZMd2s5TkZWZ2RNMzhYQ3hIakRZbnpLNE5MOUlGazlzRVNpa1UiLCJ0eXAiOiJKV1QiLCJub25jZSI6IjZjYTY4NWYwLTBjMTQtNDk2Ny05OTNkLTZiMDA4OGYyODA4ZCIsImFsZyI6IkVkRFNBIn0
+    post:
+      summary: Verify PoP
+      operationId: verifyPoP
+      description: 'Verify the proof of purchase of an NFT, according to the Mediterraneus protocol'
+      tags:
+        - 'Verify'
+      responses:
+        '200': 
+          description: 'Verified'
+          content: 
+            application/json:
+              example:
+                status: 'success'
+                message: 'Verified'
+        '403':
+          description: 'Unauthorized'
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: 'error'
+                message: 'reason'
+        '500':
+          description: 'Internal error'
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: 'error'
+                message: 'reason'
 servers:
   - url: http://localhost:1235
 components:
