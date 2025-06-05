@@ -1,0 +1,71 @@
+---
+id: verify-pop
+title: "Verify PoP"
+description: "Verify the proof of purchase of an NFT, according to the Mediterraneus protocol"
+sidebar_label: "Verify PoP"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVV1vqzgQ/StonnYldEMJSXV5S5umS7eQj5JkQ1WtHJgUJ4B9bdNbEvHfV4a0TTfVvu3LfcLYY/vMmXPGB2AcBVGUFV4CLrygoJvqb844mJCgjAXlehFcWDRLhkrR4IKxjcE2Bi9FnBKJekwKIxiFpkHimImEFs+GYk20jwlVKAQpsJR6r2Ixy8AERZ4luI/Hk+HJBIGSs0KiBPcAtmXpzxcoKCZgQswKhYXSMYTzjMZNGp2t1IEHkHGKOdEjVXEEF9h6i7ECE7jQSSvaXiMVUaU8iZNK0OIZTMCizDU+WcYxSqlnhGACnmoTcpSSPOP5tro2QVGV6ak2vDYBX0nOMzy97uTU97M+sqtrfY5jdc8ZmBekVCkTdP8rsNAunnIgkGjsLQO9rzTgFQpFQTLjbfOvzEFtAieC5KhQaLccoCC5jik2apAkooVDNS+cqPTMtsEoNG4WvvERK/BHSQUm4CpR4if2FL6qDs8IbXh7xwrW6+hydEm61mbUu7rs9a3uwLm2kp5z6dj9rtMfdUfk5tq5+e5ozOY7xjelNvX4uqNQss7QmAiUWKgmzqCFcbcMjQ0TOVFvyaVIEhRfwD+r7hv9J2QDVneCLKd0TO92ZDntk+V3axVyuc5l3/8j3QbbQc/PPSu4DXbB0Kui/C5f2bM0uF3Q8XC194dTy9+m+SqfWivb7/phmkfhLPWX/n6131XR8Pk1CJMs2M6d8dD7GSx927Nf03CeBfMs8hNb9sJdtIzsWeDv09W0m3pkN4vWBb8Pbnr+eJ7dkn22ny0CTi7m9P76zsK/Bhrvn4uLqf4v13ZvGz14fW8bbVfhygmWq5/34dXWD6cqGO7soLJ64zDY3YcR9YcDZ3y7qsbDgRNde9LLRzKqvL63W+xmo+DKKyyon7TkVMp04+dMNobQEnKhQzjttG9B5/AhtBpMkChe3pRYikxXRinudjoZi0mWMqncC7vba06XGJeCqupBl6jxWK2ruWFNtY7WOPY8YQwmHpj6BZKtPKxv1rcLXUaNLSeNJI+6Or5FEzb5t6gOH3L+P16sVmEnNqnNloXDkbpHIJy2aeg3zQT3xKdPJmiCdNThsCYS5yKraz39o0RRgfv4ZMILEY0nGoYTKvU4AXdDMon/kexvs6MvfjfOLf8l7uMkKTTMF5KV+g9M2GH1ub3Uus0d/adBtQGDOEauTraetd5PApuMH0Ko638AfFTf4A==
+sidebar_class_name: "post api-method"
+info_path: mediterraneus/API/Verifier/verifier-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Verify PoP"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/verify/{nftAddress}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Verify the proof of purchase of an NFT, according to the Mediterraneus protocol
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"nftAddress","in":"path","description":"NFT EVM Address","required":true,"content":{"text/plain":{"example":"0xF7F7a30fF5B75603A4C0d547426346F3FaEC4E94"}}},{"name":"authorization","description":"Verifiable Presentation in JWT format","in":"header","required":true,"schema":{"type":"string"},"example":"eyJraWQiOiJkaWQ6aW90YTpsbms6MHhjNjA5MmI0NGNkNDIyZmJmY2RhNGViODYzMDQ0MjhmYmQ0Y2M3MThmZTRhMWMzYzkyZDgxNTdlNjU4ODIwNWM2I2xhTUlNUlZMd2s5TkZWZ2RNMzhYQ3hIakRZbnpLNE5MOUlGazlzRVNpa1UiLCJ0eXAiOiJKV1QiLCJub25jZSI6IjZjYTY4NWYwLTBjMTQtNDk2Ny05OTNkLTZiMDA4OGYyODA4ZCIsImFsZyI6IkVkRFNBIn0"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Verified","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["success","error"]},"message":{"type":"string"}},"title":"error"},"example":{"status":"success","message":"Verified"}}}},"403":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["success","error"]},"message":{"type":"string"}},"title":"error"},"example":{"status":"error","message":"reason"}}}},"500":{"description":"Internal error","content":{"application/json":{"schema":{"type":"object","properties":{"status":{"type":"string","enum":["success","error"]},"message":{"type":"string"}},"title":"error"},"example":{"status":"error","message":"reason"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
