@@ -91,7 +91,7 @@ paths:
           eyJraWQiOiJkaWQ6aW90YTpsbms6MHhjNjA5MmI0NGNkNDIyZmJmY2RhNGViODYzMDQ0MjhmYmQ0Y2M3MThmZTRhMWMzYzkyZDgxNTdlNjU4ODIwNWM2I2xhTUlNUlZMd2s5TkZWZ2RNMzhYQ3hIakRZbnpLNE5MOUlGazlzRVNpa1UiLCJ0eXAiOiJKV1QiLCJub25jZSI6IjZjYTY4NWYwLTBjMTQtNDk2Ny05OTNkLTZiMDA4OGYyODA4ZCIsImFsZyI6IkVkRFNBIn0
     post:
       summary: Verify PoP
-      operationId: verifyPoP
+      operationId: verify_pop
       description: 'Verify the proof of purchase of an NFT, according to the Mediterraneus protocol'
       tags:
         - 'Verify'
@@ -100,6 +100,8 @@ paths:
           description: 'Verified'
           content: 
             application/json:
+              schema:
+                $ref: '#/components/schemas/error'
               example:
                 status: 'success'
                 message: 'Verified'

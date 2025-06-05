@@ -28,6 +28,12 @@ const sidebar: SidebarsConfig = {
           label: "Verify VP",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "API/Verifier/verify-pop",
+          label: "Verify PoP",
+          className: "api-method post",
+        },
       ],
     },
   ],
