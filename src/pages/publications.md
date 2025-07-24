@@ -11,6 +11,11 @@ hide_table_of_contents: true
 L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services" white paper v1.0, arXive, 2024.\
 [Online]. Available: https://doi.org/10.48550/arXiv.2403.13510 
 
+S. Dutto, D. Margaria, C. Sanna, and A. Vesco, “Toward a Post-Quantum Zero-Knowledge Verifiable Credential System
+for Self-Sovereign Identity,” Cryptology ePrint Archive, Paper
+2022/1297, 2022.\
+[Online]. Available: https://eprint.iacr.org/2022/1297
+
 ## Book Chapter
 
 L. Perugini, A. Pino, A. Solavagione, D. Margaria, and A. Vesco, "Integrating the Self-sovereign Identity in the TCP/IP Stack while Preserving Interoperability with Existing Identity Models," Cham: Springer Nature Switzerland, 2025, pp. 95–117.  \
@@ -37,6 +42,8 @@ D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 
 [Online]. Available: https://www.mdpi.com/2076-3417/11/18/8288
 
 ## Proceedings
+
+L. Perugini, A. Pastor, A. Vesco, “Decentralised Identity for Secure Connectivity in Software-Defined Networking Environments,” in *Proceedings of IEEE 11th International Conference on Network Softwarization (NetSoft)*, Budapest, Hungary, June 2025, pp. 174–178.
 
 A. Solavagione and A. Vesco, “Transition of Self-Sovereign Identity to Post-Quantum Cryptography,” in *Proceedings of 2025 International Conference on Quantum Communications, Networking, and Computing*, Nara, Japan, April 2025, pp. 174–181.
 
