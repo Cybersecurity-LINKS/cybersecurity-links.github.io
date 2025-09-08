@@ -8,12 +8,11 @@ hide_table_of_contents: true
 
 ## White Paper
 
-L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services" white paper v1.0, arXive, 2024.\
+L. Giorgino and A. Vesco, "The Mediterraneus Protocol: building an SSI native decentralised ecosystem of digital services," White Paper v1.0, arXive, 2024.\
 [Online]. Available: https://doi.org/10.48550/arXiv.2403.13510 
 
 S. Dutto, D. Margaria, C. Sanna, and A. Vesco, “Toward a Post-Quantum Zero-Knowledge Verifiable Credential System
-for Self-Sovereign Identity,” Cryptology ePrint Archive, Paper
-2022/1297, 2022.\
+for Self-Sovereign Identity,” Cryptology ePrint Archive, Paper 2022/1297, 2022.\
 [Online]. Available: https://eprint.iacr.org/2022/1297
 
 ## Book Chapter
@@ -22,6 +21,9 @@ L. Perugini, A. Pino, A. Solavagione, D. Margaria, and A. Vesco, "Integrating th
 [Online]. Available: https://doi.org/10.1007/978-3-031-83149-2_5
 
 ## Journals
+
+E. Bravi, A. Claudio, A. Lioy, and A. Vesco, "EMBRAVE: EMBedded Remote Attestation and Verification framEwork," *Sensors*, vol. 25, no. 17, 2025. \ 
+[Online]. Available: https://doi.org/10.3390/s25175514
 
 L. Perugini and A. Vesco, "On the integration of Self-Sovereign Identity with TLS 1.3 Handshake to Build Trust in IoT Systems," *Internet of Things*, p. 101103, 2024. \
 [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2542660524000453
