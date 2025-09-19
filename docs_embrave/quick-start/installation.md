@@ -4,25 +4,23 @@ description: "Installation instructions"
 ---
 # Installation
 
-<!-- aggiungere descrizione di cosa si installa -->
-
 ```sh
 git clone https://github.com/Cybersecurity-LINKS/embrave
 cd embrave
 git submodule update --init --recursive
 cd lib/tpm2-tools
 git checkout 4998ecfea817cd0efdd47bdf11a02dedab51c723
+git apply ../../patches/tpm2-tools/remove_print.patch
 cd ../../
 mkdir build
 cmake -B build .
 cd build
-sudo make <target-name>
+sudo make
 ```
-``<target-name>`` defines which targets to build:
+In case you only want to build one component, the command is ``sudo make <target>``  with ``target`` one of the following:
 
 - ``attester-server``: The Attester component
 - ``verifier``: The Verifier component
 - ``join-service``: The Join Service component
 
-If the intention is to build only all components, the command is simply ``sudo make``
 

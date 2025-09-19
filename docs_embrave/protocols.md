@@ -7,20 +7,8 @@ sidebar_position: 3
 
 ## Attester join
 
-![Attester join protocol](./imgs/join.svg "Attester join protocol")
+![Attester join protocol](./imgs/join.png "Attester join protocol")
 
-
-    Attester Join protocol
-
-
-
-## Verifier join
-![Verifier join protocol](./imgs/verifier_join.svg "Verifier join protocol")
-
-    Verifier Join protocol
 
 ## Remote Attestation
-![Remote Attestation](./imgs/remote_attestation.svg "Remote Attestation")
-
-
-    Remote attestation protocol
+![Remote Attestation](./imgs/remote_attestation.png "Remote Attestation")
