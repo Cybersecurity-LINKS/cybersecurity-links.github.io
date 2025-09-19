@@ -32,7 +32,7 @@ The following dependency must be installed specifically for the Attester applica
 * TPM2.0 installed
 * Enabled the Linux [Integrity Measurement Architecture (IMA)](https://ima-doc.readthedocs.io/en/latest/ima-intro.html) module with _ima-ng_ template and SHA256 hash
 
-**TPM2 Access Broker & Resource Manager:**
+<!-- **TPM2 Access Broker & Resource Manager:**
 
 ```sh
 git clone -n https://github.com/tpm2-software/tpm2-abrmd
@@ -45,4 +45,4 @@ sudo make install
 sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo systemctl daemon-reload
 ```
-
+ -->
