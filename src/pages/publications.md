@@ -22,7 +22,7 @@ L. Perugini, A. Pino, A. Solavagione, D. Margaria, and A. Vesco, "Integrating th
 
 ## Journals
 
-E. Bravi, A. Claudio, A. Lioy, and A. Vesco, "EMBRAVE: EMBedded Remote Attestation and Verification framEwork," *Sensors*, vol. 25, no. 17, 2025. \ 
+E. Bravi, A. Claudio, A. Lioy, and A. Vesco, "EMBRAVE: EMBedded Remote Attestation and Verification framEwork," *Sensors*, vol. 25, no. 17, 2025. \
 [Online]. Available: https://doi.org/10.3390/s25175514
 
 L. Perugini and A. Vesco, "On the integration of Self-Sovereign Identity with TLS 1.3 Handshake to Build Trust in IoT Systems," *Internet of Things*, p. 101103, 2024. \
@@ -44,6 +44,8 @@ D. Margaria and A. Vesco, "Trusted GNSS-Based Time Synchronization for Industry 
 [Online]. Available: https://www.mdpi.com/2076-3417/11/18/8288
 
 ## Proceedings
+
+D. Margaria, A. Pino, A. Vesco, G. D’Alconzo, A.J. Di Scala, E. Guglielmino, and C. Sanna, “Implementation of a Post-Quantum Anonymous Verifiable Credential Framework,” in *Proceedings of IEEE Symposium on Computers and Communications (ISCC)*, Bologna, Italy, July 2025, pp. 1–6.
 
 L. Perugini, A. Pastor, A. Vesco, “Decentralised Identity for Secure Connectivity in Software-Defined Networking Environments,” in *Proceedings of IEEE 11th International Conference on Network Softwarization (NetSoft)*, Budapest, Hungary, June 2025, pp. 174–178.
 
